@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrizzOPS</title>
+<title>GrizzOPS — "GRIZZ" Krueger</title>
 
 <style>
   :root {
@@ -53,27 +53,6 @@
   }
   .nav-logo span:first-child { color: var(--gold); }
   .nav-logo span:last-child { color: var(--blue); }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .lang-toggle {
-    background: transparent;
-    color: var(--gold);
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 8px 14px;
-    border: 1px solid var(--border);
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .lang-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 
   .nav-cta {
     background: var(--gold);
@@ -128,6 +107,7 @@
     font-size: 0.8rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    color: var(--blue);
     margin-bottom: 24px;
   }
 
@@ -152,6 +132,7 @@
     z-index: 2;
     color: #bbb;
     font-size: 1.15rem;
+    color: #bbb;
     max-width: 520px;
     margin-bottom: 48px;
     line-height: 1.7;
@@ -626,59 +607,60 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo"><span>GRIZZ</span><span>OPS</span></div>
-  <div class="nav-right">
-    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">ES</button>
-    <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="nav-cta" data-i18n="nav-cta">Book a Call</a>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <button id="lang-toggle" onclick="toggleLang()" style="background:transparent;border:1px solid #555;color:#aaa;padding:0.3rem 0.8rem;border-radius:4px;cursor:pointer;font-size:0.8rem;letter-spacing:0.05em;">ES</button>
+    <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="nav-cta" data-en="Book a Call" data-es="Reservar una Llamada">Book a Call</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-tag" style="position:relative;z-index:2;" data-i18n="hero-tag">Built for Outfitters &amp; Guides</div>
-  <h1 class="hero-headline" style="position:relative;z-index:2;" data-i18n="hero-headline">
+  <div class="hero-tag" style="position:relative;z-index:2;">Built for Outfitters &amp; Fishing Charters</div>
+  <h1 class="hero-headline" style="position:relative;z-index:2;">
     You're losing bookings.<br>
     <span class="accent-gold">Not because you're bad</span><br>
     at your job.<br>
     <span class="accent-blue">Because your system is broken.</span>
   </h1>
-  <p class="hero-sub" style="position:relative;z-index:2;" data-i18n="hero-sub">GrizzOPS fixes the booking, deposit, and follow-up chaos — built by a former outfitter who's been exactly where you are.</p>
+  <p class="hero-sub" style="position:relative;z-index:2;">GrizzOPS fixes the booking, deposit, and follow-up chaos — built by a former outfitter who's been exactly where you are.</p>
   <div class="hero-actions" style="position:relative;z-index:2;">
-    <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="btn-primary" data-i18n="hero-cta">Book a Free Call</a>
-    <a href="#sample" class="btn-secondary" data-i18n="hero-secondary">Get a sample report first →</a>
+    <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="btn-primary">Book a Free Call</a>
+    <a href="#sample" class="btn-secondary">Get a sample report first →</a>
   </div>
   <div class="hero-divider"></div>
 </section>
 
 <!-- PROBLEM -->
 <section id="problem">
-  <div class="section-label" data-i18n="problem-label">The Real Problem</div>
-  <div class="problem-lines fade-up" data-i18n="problem-lines">
+  <div class="section-label">The Real Problem</div>
+  <div class="problem-lines fade-up">
     <p>You're <span class="strike">double-booking trips</span>.</p>
     <p>You're <span class="strike">chasing deposits by text</span>.</p>
     <p>You're <span class="strike">losing repeat clients</span> because nobody followed up.</p>
   </div>
-  <p class="problem-close fade-up" data-i18n="problem-close">You're running a serious operation on a broken system. The leak is silent — but every season, it costs you real money.</p>
+  <p class="problem-close fade-up">You're running a serious operation on a broken system. The leak is silent — but every season, it costs you real money.</p>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="about-inner">
     <div class="about-photo fade-up">
-      <img src="headshot.png" alt="KJ Grizz Krueger" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="headshot.png" alt="Grizz Krueger" style="width:100%;height:100%;object-fit:cover;width:100%;height:auto;display:block;">
     </div>
-    <div>
-      <div class="about-name">KJ "GRIZZ" Krueger</div>
-      <div class="about-title" data-i18n="about-title">Former Outfitter · Founder, GrizzOPS</div>
-      <p class="about-copy" data-i18n="about-copy">I spent 20 years as a professional hunting guide and outfitter across Wyoming and Alaska — running multi-week wilderness hunts, managing staff, wrangling horses, and keeping clients happy in some of the most remote country in North America. I know what it's like to run a full season on a spreadsheet and a prayer. I built GrizzOPS because I got tired of watching good operators lose real money to broken booking systems, missed follow-ups, and deposit chaos that never had to exist. This is the system I wish I'd had.</p>
+    <div class="">
+      <div class="about-name">"GRIZZ" Krueger</div>
+      <div class="about-title">Former Outfitter · Founder, GrizzOPS</div>
+      <p class="about-copy">20 years as a professional hunting guide and outfitter in Wyoming and Alaska. I didn't learn your world from a textbook — I lived it. GrizzOPS exists because I got tired of watching good operators lose money to problems I already knew how to fix.</p>
+      <p class="about-copy" style="margin-top:1rem;">When I got off the mountain, I went back to school — 240 hours of Full Stack Web Development at the University of Arizona. I didn't build GrizzOPS because it sounded like a good business idea. I built it because I lived the problem.</p>
       <div class="about-stats">
         <div>
           <span class="stat-num">20</span>
-          <span class="stat-label" data-i18n="stat-years">Years in the Field</span>
+          <span class="stat-label">Years in the Field</span>
         </div>
         <div>
           <span class="stat-num">WY · AK</span>
-          <span class="stat-label" data-i18n="stat-where">Where I Ran Ops</span>
+          <span class="stat-label">Where I Ran Ops</span>
         </div>
       </div>
     </div>
@@ -688,43 +670,43 @@
 <!-- TIERS -->
 <section id="tiers">
   <div class="tiers-header fade-up">
-    <div class="section-label" data-i18n="tiers-label">How It Works</div>
-    <h2 class="tiers-headline" data-i18n="tiers-headline">Three tiers. One direction.<br><span style="color:var(--gold)">Forward.</span></h2>
+    <div class="section-label">How It Works</div>
+    <h2 class="tiers-headline">Three tiers. One direction.<br><span style="color:var(--gold)">Forward.</span></h2>
   </div>
 
   <div class="tiers-grid">
     <!-- REPORTS -->
     <div class="tier-card fade-up">
-      <div class="tier-badge" data-i18n="t1-badge">Step 1 — Find the Leak</div>
+      <div class="tier-badge">Step 1 — Find the Leak</div>
       <div class="tier-name">GrizzREPORTS</div>
-      <div class="tier-tagline" data-i18n="t1-tagline">Diagnose Before You Fix</div>
-      <p class="tier-desc" data-i18n="t1-desc">Audits your website, social, and booking flow — shows exactly where you're bleeding clients and what to do about it.</p>
-      <p class="tier-for" data-i18n="t1-for">For any outfitter who suspects something's broken but can't pinpoint it.</p>
+      <div class="tier-tagline">Diagnose Before You Fix</div>
+      <p class="tier-desc">Audits your website, social, and booking flow — shows exactly where you're bleeding clients and what to do about it.</p>
+      <p class="tier-for">For any outfitter who suspects something's broken but can't pinpoint it.</p>
       <div class="tier-price">$500</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;" data-i18n="t1-note">One-time project fee</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time project fee</div>
     </div>
 
     <!-- BACKBONE -->
     <div class="tier-card fade-up">
-      <div class="tier-badge" data-i18n="t2-badge">Step 2 — Fix It</div>
+      <div class="tier-badge">Step 2 — Fix It</div>
       <div class="tier-name">GrizzBACKBONE</div>
-      <div class="tier-tagline" data-i18n="t2-tagline">Install the System</div>
-      <p class="tier-desc" data-i18n="t2-desc">Complete scheduling, deposit, payment, and communication structure — built, tested, and ready to run. The chaos ends here.</p>
-      <p class="tier-for" data-i18n="t2-for">For operators booking manually who want it executed.</p>
+      <div class="tier-tagline">Install the System</div>
+      <p class="tier-desc">Complete scheduling, deposit, payment, and communication structure — built, tested, and ready to run. The chaos ends here.</p>
+      <p class="tier-for">For operators booking manually who want it executed.</p>
       <div class="tier-price">$3,500 – $5,500</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;" data-i18n="t2-note">One-time project fee</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time project fee</div>
       <div class="tier-arrow">→</div>
     </div>
 
     <!-- CORE -->
     <div class="tier-card fade-up">
-      <div class="tier-badge" data-i18n="t3-badge">Step 3 — Keep It Running</div>
+      <div class="tier-badge">Step 3 — Keep It Running</div>
       <div class="tier-name">GrizzCORE</div>
-      <div class="tier-tagline" data-i18n="t3-tagline">Ongoing Management</div>
-      <p class="tier-desc" data-i18n="t3-desc">Monthly management, optimization, and automation maintenance. Your system keeps working while you're in the field.</p>
-      <p class="tier-for" data-i18n="t3-for">For clients who want it executed without touching it themselves.</p>
+      <div class="tier-tagline">Ongoing Management</div>
+      <p class="tier-desc">Monthly management, optimization, and automation maintenance. Your system keeps working while you're in the field.</p>
+      <p class="tier-for">For clients who want it executed without touching it themselves.</p>
       <div class="tier-price">$500 / mo</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;" data-i18n="t3-note">Monthly retainer — no long-term contract</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">Monthly retainer — no long-term contract</div>
     </div>
   </div>
 </section>
@@ -732,162 +714,71 @@
 <!-- SOCIAL PROOF -->
 <section id="proof">
   <div class="proof-inner fade-up">
-    <div class="section-label" data-i18n="proof-label">Early Results</div>
-    <p class="proof-quote" data-i18n="proof-quote">"Outfitter collected their <span class="hl">first deposit within 48 hours</span> of launch."</p>
-    <p class="proof-attr" data-i18n="proof-attr">[Client Name] · [Operation] · [State] — Coming Soon</p>
-    <div class="proof-placeholder" data-i18n="proof-placeholder">Testimonials loading as clients go live</div>
+    <div class="section-label">Early Results</div>
+    <p class="proof-quote">"Outfitter collected their <span class="hl">first deposit within 48 hours</span> of launch."</p>
+    <p class="proof-attr">[Client Name] · [Operation] · [State] — Coming Soon</p>
+    <div class="proof-placeholder">Testimonials loading as clients go live</div>
   </div>
 </section>
 
 <!-- EMAIL CAPTURE -->
 <section id="sample">
-  <div class="sample-headline fade-up" data-i18n="sample-headline">Not ready to call yet?</div>
-  <p class="sample-sub fade-up" data-i18n="sample-sub">Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything.</p>
-  <div class="email-row fade-up">
-    <input type="email" id="email-input" placeholder="your@email.com" data-i18n-placeholder="email-placeholder">
-    <button data-i18n="email-btn">Send My Sample</button>
+  <div class="sample-headline fade-up">Not ready to call yet?</div>
+  <p class="sample-sub fade-up">Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything.</p>
+  <div class="fade-up" style="max-width:500px;margin:0 auto;">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <style>
+      #mc_embed_signup{background:transparent;clear:left;font:14px Helvetica,Arial,sans-serif;width:100%;}
+      #mc_embed_signup h2{display:none;}
+      #mc_embed_signup .indicates-required{display:none;}
+      #mc_embed_signup .mc-field-group label{display:none;}
+      #mc_embed_signup input.email{background:#1a1a1a;border:1px solid #333;color:#fff;padding:0.85rem 1rem;border-radius:6px;width:100%;box-sizing:border-box;font-size:1rem;}
+      #mc_embed_signup input.email::placeholder{color:#555;}
+      #mc_embed_signup .button{background:#f5c542;color:#000;border:none;padding:0.85rem 2rem;border-radius:6px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;cursor:pointer;width:100%;margin-top:0.5rem;}
+      #mc_embed_signup .button:hover{background:#33ccff;}
+      #mc_embed_signup .response{color:#33ccff;margin-top:0.5rem;}
+      #mc_embed_signup .refferal_badge{display:none;}
+      #mc_embed_signup p{display:none;}
+    </style>
+    <div id="mc_embed_signup">
+      <form action="https://grizzops.us17.list-manage.com/subscribe/post?u=02c984a550db61fb2307d65a8&amp;id=7f1372277d&amp;f_id=00dd63e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+          <div class="mc-field-group">
+            <label for="mce-EMAIL">Email Address</label>
+            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.com" required="">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none;"></div>
+            <div class="response" id="mce-success-response" style="display:none;"></div>
+          </div>
+          <div aria-hidden="true" style="position:absolute;left:-5000px;">
+            <input type="text" name="b_02c984a550db61fb2307d65a8_7f1372277d" tabindex="-1" value="">
+          </div>
+          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Send My Sample">
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section id="cta">
   <div class="cta-bg"></div>
-  <h2 class="cta-headline fade-up" data-i18n="cta-headline">If you think something's broken,<br><span style="color:var(--gold)">it probably is.</span></h2>
-  <p class="cta-sub fade-up" data-i18n="cta-sub">Let's find out in 30 minutes. No pitch. No pressure.</p>
-  <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="btn-primary fade-up" style="position:relative;" data-i18n="cta-btn">Book a Free Call</a>
+  <h2 class="cta-headline fade-up">If you think something's broken,<br><span style="color:var(--gold)">it probably is.</span></h2>
+  <p class="cta-sub fade-up">Let's find out in 30 minutes. No pitch. No pressure.</p>
+  <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="btn-primary fade-up" style="position:relative;">Book a Free Call</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo"><span>GRIZZ</span><span>OPS</span></div>
-  <div class="footer-copy">© 2025 GrizzOPS · grizzops.com</div>
+  <div class="footer-copy">© 2026 GrizzOPS · grizzops.com</div>
   <a href="mailto:grizz@grizzops.com" class="footer-email">grizz@grizzops.com</a>
 </footer>
 
 <script>
-  // ── TRANSLATIONS ──
-  const translations = {
-    en: {
-      'nav-cta':           'Book a Call',
-      'hero-tag':          'Built for Outfitters &amp; Guides',
-      'hero-headline':     'You\'re losing bookings.<br><span class="accent-gold">Not because you\'re bad</span><br>at your job.<br><span class="accent-blue">Because your system is broken.</span>',
-      'hero-sub':          'GrizzOPS fixes the booking, deposit, and follow-up chaos — built by a former outfitter who\'s been exactly where you are.',
-      'hero-cta':          'Book a Free Call',
-      'hero-secondary':    'Get a sample report first →',
-      'problem-label':     'The Real Problem',
-      'problem-lines':     '<p>You\'re <span class="strike">double-booking trips</span>.</p><p>You\'re <span class="strike">chasing deposits by text</span>.</p><p>You\'re <span class="strike">losing repeat clients</span> because nobody followed up.</p>',
-      'problem-close':     'You\'re running a serious operation on a broken system. The leak is silent — but every season, it costs you real money.',
-      'about-title':       'Former Outfitter · Founder, GrizzOPS',
-      'about-copy':        'I spent 20 years as a professional hunting guide and outfitter across Wyoming and Alaska — running multi-week wilderness hunts, managing staff, wrangling horses, and keeping clients happy in some of the most remote country in North America. I know what it\'s like to run a full season on a spreadsheet and a prayer. I built GrizzOPS because I got tired of watching good operators lose real money to broken booking systems, missed follow-ups, and deposit chaos that never had to exist. This is the system I wish I\'d had.',
-      'stat-years':        'Years in the Field',
-      'stat-where':        'Where I Ran Ops',
-      'tiers-label':       'How It Works',
-      'tiers-headline':    'Three tiers. One direction.<br><span style="color:var(--gold)">Forward.</span>',
-      't1-badge':          'Step 1 — Find the Leak',
-      't1-tagline':        'Diagnose Before You Fix',
-      't1-desc':           'Audits your website, social, and booking flow — shows exactly where you\'re bleeding clients and what to do about it.',
-      't1-for':            'For any outfitter who suspects something\'s broken but can\'t pinpoint it.',
-      't1-note':           'One-time project fee',
-      't2-badge':          'Step 2 — Fix It',
-      't2-tagline':        'Install the System',
-      't2-desc':           'Complete scheduling, deposit, payment, and communication structure — built, tested, and ready to run. The chaos ends here.',
-      't2-for':            'For operators booking manually who want it executed.',
-      't2-note':           'One-time project fee',
-      't3-badge':          'Step 3 — Keep It Running',
-      't3-tagline':        'Ongoing Management',
-      't3-desc':           'Monthly management, optimization, and automation maintenance. Your system keeps working while you\'re in the field.',
-      't3-for':            'For clients who want it executed without touching it themselves.',
-      't3-note':           'Monthly retainer — no long-term contract',
-      'proof-label':       'Early Results',
-      'proof-quote':       '"Outfitter collected their <span class="hl">first deposit within 48 hours</span> of launch."',
-      'proof-attr':        '[Client Name] · [Operation] · [State] — Coming Soon',
-      'proof-placeholder': 'Testimonials loading as clients go live',
-      'sample-headline':   'Not ready to call yet?',
-      'sample-sub':        'Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything.',
-      'email-placeholder': 'your@email.com',
-      'email-btn':         'Send My Sample',
-      'cta-headline':      'If you think something\'s broken,<br><span style="color:var(--gold)">it probably is.</span>',
-      'cta-sub':           'Let\'s find out in 30 minutes. No pitch. No pressure.',
-      'cta-btn':           'Book a Free Call',
-    },
-    es: {
-      'nav-cta':           'Reservar una Llamada',
-      'hero-tag':          'Hecho para Outfitters y Guías',
-      'hero-headline':     'Estás perdiendo reservaciones.<br><span class="accent-gold">No porque seas malo</span><br>en tu trabajo.<br><span class="accent-blue">Porque tu sistema está roto.</span>',
-      'hero-sub':          'GrizzOPS elimina el caos de reservas, depósitos y seguimiento — creado por un ex-outfitter que ha vivido exactamente lo que tú vives.',
-      'hero-cta':          'Reserva una Llamada Gratis',
-      'hero-secondary':    'Obtén un reporte de muestra primero →',
-      'problem-label':     'El Problema Real',
-      'problem-lines':     '<p>Estás <span class="strike">haciendo dobles reservaciones</span>.</p><p>Estás <span class="strike">persiguiendo depósitos por texto</span>.</p><p>Estás <span class="strike">perdiendo clientes</span> porque nadie hizo seguimiento.</p>',
-      'problem-close':     'Estás dirigiendo una operación seria con un sistema roto. La fuga es silenciosa — pero cada temporada te cuesta dinero real.',
-      'about-title':       'Ex-Outfitter · Fundador, GrizzOPS',
-      'about-copy':        'Pasé 20 años como guía de cacería profesional y outfitter en Wyoming y Alaska — dirigiendo cacerías en zonas remotas, manejando personal, arreando caballos y manteniendo a los clientes satisfechos en algunos de los territorios más inhóspitos de América del Norte. Sé lo que es manejar una temporada completa con una hoja de cálculo y la esperanza. Construí GrizzOPS porque me cansé de ver buenos operadores perder dinero real por sistemas de reservas rotos, seguimientos perdidos y caos de depósitos que nunca debieron existir. Este es el sistema que yo hubiera querido tener.',
-      'stat-years':        'Años en el Campo',
-      'stat-where':        'Donde Operé',
-      'tiers-label':       'Cómo Funciona',
-      'tiers-headline':    'Tres niveles. Una dirección.<br><span style="color:var(--gold)">Adelante.</span>',
-      't1-badge':          'Paso 1 — Encuentra el Problema',
-      't1-tagline':        'Diagnostica Antes de Corregir',
-      't1-desc':           'Audita tu sitio web, redes sociales y flujo de reservas — muestra exactamente dónde estás perdiendo clientes y qué hacer al respecto.',
-      't1-for':            'Para cualquier outfitter que sospecha que algo está mal pero no puede identificarlo.',
-      't1-note':           'Tarifa única por proyecto',
-      't2-badge':          'Paso 2 — Corrígelo',
-      't2-tagline':        'Instala el Sistema',
-      't2-desc':           'Estructura completa de programación, depósitos, pagos y comunicación — construida, probada y lista para funcionar. El caos termina aquí.',
-      't2-for':            'Para operadores que reservan manualmente y quieren que se ejecute.',
-      't2-note':           'Tarifa única por proyecto',
-      't3-badge':          'Paso 3 — Mantenlo Funcionando',
-      't3-tagline':        'Gestión Continua',
-      't3-desc':           'Gestión mensual, optimización y mantenimiento de automatización. Tu sistema sigue funcionando mientras estás en el campo.',
-      't3-for':            'Para clientes que quieren que se ejecute sin tocarlo ellos mismos.',
-      't3-note':           'Retención mensual — sin contrato a largo plazo',
-      'proof-label':       'Resultados Iniciales',
-      'proof-quote':       '"El outfitter cobró su <span class="hl">primer depósito en 48 horas</span> del lanzamiento."',
-      'proof-attr':        '[Nombre del Cliente] · [Operación] · [Estado] — Próximamente',
-      'proof-placeholder': 'Testimonios cargándose a medida que los clientes se activan',
-      'sample-headline':   '¿Aún no estás listo para llamar?',
-      'sample-sub':        'Obtén un GrizzREPORT de muestra real — ve exactamente cómo se ve un sistema de reservas roto antes de comprometerte con nada.',
-      'email-placeholder': 'tu@email.com',
-      'email-btn':         'Envíame Mi Muestra',
-      'cta-headline':      'Si crees que algo está roto,<br><span style="color:var(--gold)">probablemente lo está.</span>',
-      'cta-sub':           'Descubrámoslo en 30 minutos. Sin discurso de ventas. Sin presión.',
-      'cta-btn':           'Reserva una Llamada Gratis',
-    }
-  };
-
-  let currentLang = 'en';
-
-  function toggleLang() {
-    currentLang = currentLang === 'en' ? 'es' : 'en';
-    document.documentElement.lang = currentLang;
-    document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'ES' : 'EN';
-    applyTranslations();
-  }
-
-  function applyTranslations() {
-    const t = translations[currentLang];
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (t[key] !== undefined) el.innerHTML = t[key];
-    });
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (t[key] !== undefined) el.placeholder = t[key];
-    });
-  }
-
-  // ── SCROLL ANIMATIONS ──
+  // Fade-up scroll animations
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'none';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+    entrie
