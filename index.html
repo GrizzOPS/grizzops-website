@@ -819,6 +819,116 @@
 </footer>
 
 <script>
-  // Fade-up scroll animations
+  // ── LANGUAGE TOGGLE ──
+  const translations = {
+    en: {
+      'nav-cta':        'Book a Call',
+      'hero-tag':       'Built for Outfitters &amp; Fishing Charters',
+      'hero-headline':  'You\'re losing bookings.<br><span class="accent-gold">Not because you\'re bad</span><br>at your job.<br><span class="accent-blue">Because your system is broken.</span>',
+      'hero-sub':       'GrizzOPS fixes the booking, deposit, and follow-up chaos — built by a former outfitter who\'s been exactly where you are.',
+      'hero-cta':       'Book a Free Call',
+      'hero-secondary': 'Get a sample report first →',
+      'problem-label':  'The Real Problem',
+      'problem-lines':  '<p>You\'re <span class="strike">double-booking trips</span>.</p><p>You\'re <span class="strike">chasing deposits by text</span>.</p><p>You\'re <span class="strike">losing repeat clients</span> because nobody followed up.</p>',
+      'problem-close':  'You\'re running a serious operation on a broken system. The leak is silent — but every season, it costs you real money.',
+      'about-title':    'Former Outfitter · Founder, GrizzOPS',
+      'about-copy1':    '20 years as a professional hunting guide and outfitter in Wyoming and Alaska. I didn\'t learn your world from a textbook — I lived it. GrizzOPS exists because I got tired of watching good operators lose money to problems I already knew how to fix.',
+      'about-copy2':    'When I got off the mountain, I went back to school — 240 hours of Full Stack Web Development at the University of Arizona. I didn\'t build GrizzOPS because it sounded like a good business idea. I built it because I lived the problem.',
+      'stat-years':     'Years in the Field',
+      'stat-where':     'Where I Ran Ops',
+      'tiers-label':    'How It Works',
+      'tiers-headline': 'Three tiers. One direction.<br><span style="color:var(--gold)">Forward.</span>',
+      'proof-label':    'Early Results',
+      'proof-quote':    '"Outfitter collected their <span class="hl">first deposit within 48 hours</span> of launch."',
+      'proof-attr':     '[Client Name] · [Operation] · [State] — Coming Soon',
+      'proof-ph':       'Testimonials loading as clients go live',
+      'sample-hed':     'Not ready to call yet?',
+      'sample-sub':     'Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View the sample here.</a>',
+      'cta-headline':   'If you think something\'s broken,<br><span style="color:var(--gold)">it probably is.</span>',
+      'cta-sub':        'Let\'s find out in 30 minutes. No pitch. No pressure.',
+      'cta-btn':        'Book a Free Call',
+    },
+    es: {
+      'nav-cta':        'Reservar una Llamada',
+      'hero-tag':       'Hecho para Outfitters y Charters de Pesca',
+      'hero-headline':  'Estás perdiendo reservaciones.<br><span class="accent-gold">No porque seas malo</span><br>en tu trabajo.<br><span class="accent-blue">Porque tu sistema está roto.</span>',
+      'hero-sub':       'GrizzOPS elimina el caos de reservas, depósitos y seguimiento — creado por un ex-outfitter que ha vivido exactamente lo que tú vives.',
+      'hero-cta':       'Reserva una Llamada Gratis',
+      'hero-secondary': 'Obtén un reporte de muestra primero →',
+      'problem-label':  'El Problema Real',
+      'problem-lines':  '<p>Estás <span class="strike">haciendo dobles reservaciones</span>.</p><p>Estás <span class="strike">persiguiendo depósitos por texto</span>.</p><p>Estás <span class="strike">perdiendo clientes</span> porque nadie hizo seguimiento.</p>',
+      'problem-close':  'Estás dirigiendo una operación seria con un sistema roto. La fuga es silenciosa — pero cada temporada te cuesta dinero real.',
+      'about-title':    'Ex-Outfitter · Fundador, GrizzOPS',
+      'about-copy1':    '20 años como guía de cacería profesional y outfitter en Wyoming y Alaska. No aprendí tu mundo de un libro de texto — lo viví. GrizzOPS existe porque me cansé de ver buenos operadores perder dinero por problemas que yo ya sabía cómo resolver.',
+      'about-copy2':    'Cuando bajé de la montaña, volví a la escuela — 240 horas de Desarrollo Web Full Stack en la Universidad de Arizona. No construí GrizzOPS porque sonara como una buena idea de negocio. Lo construí porque viví el problema.',
+      'stat-years':     'Años en el Campo',
+      'stat-where':     'Donde Operé',
+      'tiers-label':    'Cómo Funciona',
+      'tiers-headline': 'Tres niveles. Una dirección.<br><span style="color:var(--gold)">Adelante.</span>',
+      'proof-label':    'Resultados Iniciales',
+      'proof-quote':    '"El outfitter cobró su <span class="hl">primer depósito en 48 horas</span> del lanzamiento."',
+      'proof-attr':     '[Nombre del Cliente] · [Operación] · [Estado] — Próximamente',
+      'proof-ph':       'Testimonios cargándose a medida que los clientes se activan',
+      'sample-hed':     '¿Aún no estás listo para llamar?',
+      'sample-sub':     'Obtén un GrizzREPORT de muestra real — ve exactamente cómo se ve un sistema de reservas roto antes de comprometerte con nada. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">Ver la muestra aquí.</a>',
+      'cta-headline':   'Si crees que algo está roto,<br><span style="color:var(--gold)">probablemente lo está.</span>',
+      'cta-sub':        'Descubrámoslo en 30 minutos. Sin discurso de ventas. Sin presión.',
+      'cta-btn':        'Reserva una Llamada Gratis',
+    }
+  };
+
+  const selectors = {
+    'nav-cta':        '.nav-cta',
+    'hero-tag':       '.hero-tag',
+    'hero-headline':  '.hero-headline',
+    'hero-sub':       '.hero-sub',
+    'hero-cta':       '.btn-primary.hero-cta',
+    'hero-secondary': '.btn-secondary',
+    'problem-label':  '#problem .section-label',
+    'problem-lines':  '.problem-lines',
+    'problem-close':  '.problem-close',
+    'about-title':    '.about-title',
+    'about-copy1':    '.about-copy:first-of-type',
+    'about-copy2':    '.about-copy + .about-copy',
+    'stat-years':     '.about-stats .stat-label:first-child',
+    'stat-where':     '.about-stats .stat-label:last-child',
+    'tiers-label':    '#tiers .section-label',
+    'tiers-headline': '.tiers-headline',
+    'proof-label':    '#proof .section-label',
+    'proof-quote':    '.proof-quote',
+    'proof-attr':     '.proof-attr',
+    'proof-ph':       '.proof-placeholder',
+    'sample-hed':     '.sample-headline',
+    'sample-sub':     '.sample-sub',
+    'cta-headline':   '.cta-headline',
+    'cta-sub':        '.cta-sub',
+    'cta-btn':        '#cta .btn-primary',
+  };
+
+  let lang = 'en';
+
+  function toggleLang() {
+    lang = lang === 'en' ? 'es' : 'en';
+    document.getElementById('lang-toggle').textContent = lang === 'en' ? 'ES' : 'EN';
+    document.documentElement.lang = lang;
+    const t = translations[lang];
+    Object.entries(selectors).forEach(([key, sel]) => {
+      const el = document.querySelector(sel);
+      if (el && t[key]) el.innerHTML = t[key];
+    });
+  }
+
+  // ── SCROLL ANIMATIONS ──
   const observer = new IntersectionObserver((entries) => {
-    entrie
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));</script>
+</body>
+</html>
