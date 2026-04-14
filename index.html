@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GrizzOPS — "GRIZZ" Krueger</title>
 
+<!-- OG Meta Tags -->
+<meta property="og:title" content="GrizzOPS — Built for Outfitters">
+<meta property="og:description" content="Stop losing bookings. GrizzOPS fixes the booking, deposit, and follow-up chaos for hunting outfitters and fishing charters.">
+<meta property="og:image" content="https://grizzops.com/headshot.png">
+<meta property="og:url" content="https://grizzops.com">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='22' fill='%23D4A017'>G</text></svg>">
+
 <style>
   :root {
     --black: #0a0a0a;
@@ -618,14 +628,30 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    #hero, #problem, #about, #tiers, #proof, #sample, #cta { padding-left: 24px; padding-right: 24px; }
+    nav {
+      padding: 12px 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    nav > div:last-child {
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-phone { display: none; }
+    .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
+    #hero { padding: 100px 24px 60px; }
+    #problem, #about, #tiers, #proof, #sample, #cta, #contact { padding-left: 24px; padding-right: 24px; }
     .about-inner { grid-template-columns: 1fr; }
     .about-photo { width: 100%; height: 200px; }
     .tiers-grid { grid-template-columns: 1fr; }
     .tier-arrow { display: none !important; }
     footer { padding: 24px; flex-direction: column; align-items: flex-start; }
     .about-stats { gap: 24px; }
+    #proof { display: block !important; }
+    #contact { padding-top: 60px; padding-bottom: 60px; }
+    #contact form > div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
   }
 </style>
 
@@ -645,7 +671,7 @@
   <div class="nav-logo"><span>GRIZZ</span><span>OPS</span></div>
   <div style="display:flex;align-items:center;gap:1rem;">
     <button id="lang-toggle" onclick="toggleLang()" style="background:transparent;border:1px solid #555;color:#aaa;padding:0.3rem 0.8rem;border-radius:4px;cursor:pointer;font-size:0.8rem;letter-spacing:0.05em;">ES</button>
-    <a href="tel:+15207531741" style="color:#00BFFF;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;">(520) 753-1741</a>
+    <a href="tel:+15207531741" class="nav-phone" style="color:#00BFFF;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;">(520) 753-1741</a>
     <a href="https://www.facebook.com/profile.php?id=61570996226927" target="_blank" aria-label="Facebook" style="display:inline-flex;align-items:center;color:#1877F2;text-decoration:none;padding:6px;">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
     </a>
@@ -796,7 +822,8 @@
       #mc_embed_signup input.email::placeholder{color:#555;}
       #mc_embed_signup .button{background:#f5c542;color:#000;border:none;padding:0.85rem 2rem;border-radius:6px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;cursor:pointer;width:100%;margin-top:0.5rem;height:auto !important;line-height:1.4 !important;}
       #mc_embed_signup .button:hover{background:#33ccff;}
-      #mc_embed_signup .response{color:#33ccff;margin-top:0.5rem;}
+      #mc_embed_signup .response{color:#f5c542;margin-top:0.5rem;}
+      #mc_embed_signup div.mce_inline_error{color:#f5c542 !important;background:transparent !important;}
       #mc_embed_signup .refferal_badge{display:none;}
       #mc_embed_signup p{display:none;}
       #mc_embed_signup form{padding-bottom:60px !important;}
@@ -887,9 +914,8 @@
     <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
       <a href="tel:+15207531741" style="color:#00BFFF;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;min-height:44px;display:inline-flex;align-items:center;">(520) 753-1741</a>
       <a href="mailto:grizz@grizzops.com" style="color:#00BFFF;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.9rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;">grizz@grizzops.com</a>
-      <a href="https://www.facebook.com/profile.php?id=61570996226927" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:#1877F2;font-family:'Arial Narrow',Arial,sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-decoration:none;min-height:44px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-        Facebook
+      <a href="https://www.facebook.com/profile.php?id=61570996226927" target="_blank" aria-label="Facebook" style="display:inline-flex;align-items:center;color:#1877F2;text-decoration:none;min-height:44px;padding:4px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
       </a>
     </div>
   </div>
