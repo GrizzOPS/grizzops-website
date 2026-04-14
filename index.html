@@ -41,11 +41,15 @@
     overflow-x: hidden;
   }
 
-  /* ── UTILITY BAR ── */
-  .util-bar {
+  /* ── SITE HEADER (utility bar + nav wrapper) ── */
+  #site-header {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 101;
+  }
+
+  /* ── UTILITY BAR ── */
+  .util-bar {
     background: #111111;
     border-bottom: 1px solid rgba(212,160,23,0.1);
     display: flex;
@@ -70,8 +74,8 @@
 
   /* ── NAV ── */
   nav {
-    position: fixed;
-    top: 36px; left: 0; right: 0;
+    position: relative;
+    top: auto; left: auto; right: auto;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -113,7 +117,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 160px 48px 80px;
+    padding: 140px 48px 80px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -664,13 +668,12 @@
       gap: 8px;
       flex-wrap: wrap;
     }
-    .util-bar { gap: 14px; padding: 6px 16px; }
+    .util-bar { gap: 12px; padding: 6px 16px; }
     .util-bar a { font-size: 12px; }
-    nav { top: auto; }
     .nav-phone { display: none; }
     .nav-social { display: none !important; }
     .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
-    #hero { padding: 130px 24px 60px; }
+    #hero { padding-left: 24px; padding-right: 24px; padding-bottom: 60px; }
     #problem, #about, #tiers, #proof, #sample, #cta, #contact { padding-left: 24px; padding-right: 24px; }
     .about-inner { grid-template-columns: 1fr; }
     .about-photo { width: 100%; height: 200px; }
@@ -697,6 +700,7 @@
 </head>
 <body>
 
+<header id="site-header">
 <!-- UTILITY BAR -->
 <div class="util-bar">
   <a href="tel:+15207531741">
@@ -728,6 +732,7 @@
     <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="nav-cta" data-en="Book a Call" data-es="Reservar una Llamada">Book a Call</a>
   </div>
 </nav>
+</header>
 
 <!-- HERO -->
 <section id="hero">
@@ -1071,6 +1076,17 @@
       if (el && t[key]) el.innerHTML = t[key];
     });
   }
+
+  // ── HEADER HEIGHT ADJUSTMENT ──
+  function adjustForHeader() {
+    const header = document.getElementById('site-header');
+    const hero = document.getElementById('hero');
+    if (!header || !hero) return;
+    const h = header.offsetHeight;
+    hero.style.paddingTop = (h + 40) + 'px';
+  }
+  adjustForHeader();
+  window.addEventListener('resize', adjustForHeader);
 
   // ── SCROLL ANIMATIONS ──
   const observer = new IntersectionObserver((entries) => {
