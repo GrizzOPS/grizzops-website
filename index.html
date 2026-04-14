@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='22' fill='%23D4A017'>G</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0b0f'/><text x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='22' fill='%23f5c542'>G</text></svg>">
 
 <style>
   :root {
@@ -846,16 +846,38 @@
 <section id="proof">
   <div class="proof-inner fade-up">
     <div class="section-label">What People Say</div>
-    <div style="position:relative;padding:0 24px;">
-      <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:3rem;line-height:1;color:var(--gold);opacity:0.3;position:absolute;top:-10px;left:0;">"</div>
-      <p class="proof-quote" style="font-style:italic;">"Grizz was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
-      <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:3rem;line-height:1;color:var(--gold);opacity:0.3;position:absolute;bottom:-20px;right:0;">"</div>
-    </div>
-    <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;">
+    <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+    <p class="proof-quote" style="font-style:italic;">"Grizz was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
+    <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
       <div style="width:40px;height:1px;background:var(--border);"></div>
       <p class="proof-attr">Tim Hockhalter · Retired Outfitter</p>
       <div style="width:40px;height:1px;background:var(--border);"></div>
     </div>
+  </div>
+
+  <!-- TESTIMONIAL SUBMISSION FORM -->
+  <div class="proof-inner fade-up" style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;">
+    <div class="section-label">Share Your Experience</div>
+    <h3 style="font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;font-size:1.6rem;color:var(--gold);margin-bottom:32px;line-height:1.2;">Worked with GrizzOPS?<br><span style="color:var(--blue);">We'd love to hear from you.</span></h3>
+    <form name="testimonial-submission" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" style="text-align:left;">
+      <input type="hidden" name="form-name" value="testimonial-submission">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div>
+          <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Name</label>
+          <input type="text" name="name" required style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Business Name</label>
+          <input type="text" name="business" style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+        </div>
+      </div>
+      <div style="margin-bottom:24px;">
+        <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Share your experience with GrizzOPS</label>
+        <textarea name="experience" rows="5" required style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;resize:vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">Submit Testimonial</button>
+    </form>
   </div>
 </section>
 
@@ -863,45 +885,8 @@
 <section id="sample">
   <div class="sample-headline fade-up">Not ready to call yet?</div>
   <p class="sample-sub fade-up">Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View the sample here.</a></p>
-  <div class="fade-up" style="max-width:500px;margin:0 auto;">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <style>
-      #mc_embed_signup{background:transparent;clear:left;font:14px Helvetica,Arial,sans-serif;width:100%;padding-bottom:2rem;}
-      #mc_embed_signup h2{display:none;}
-      #mc_embed_signup .indicates-required{display:none;}
-      #mc_embed_signup .mc-field-group label{display:none;}
-      #mc_embed_signup input.email{background:#1a1a1a;border:1px solid #333;color:#fff;padding:0.85rem 1rem;border-radius:6px;width:100%;box-sizing:border-box;font-size:1rem;}
-      #mc_embed_signup input.email::placeholder{color:#555;}
-      #mc_embed_signup .button{background:#f5c542;color:#000;border:none;padding:0.85rem 2rem;border-radius:6px;font-weight:700;font-size:0.9rem;letter-spacing:0.05em;cursor:pointer;width:100%;margin-top:0.5rem;height:auto !important;line-height:1.4 !important;}
-      #mc_embed_signup .button:hover{background:#33ccff;}
-      #mc_embed_signup .response{color:#f5c542;margin-top:0.5rem;}
-      #mc_embed_signup div.mce_inline_error{color:#f5c542 !important;background:transparent !important;}
-      #mc_embed_signup .refferal_badge{display:none;}
-      #mc_embed_signup p{display:none;}
-      #mc_embed_signup form{padding-bottom:60px !important;}
-      #mc_embed_signup_scroll{padding-bottom:20px !important;}
-      #mc_embed_signup .button{margin-bottom:20px !important;}
-    </style>
-    <div id="mc_embed_signup">
-      <form action="https://grizzops.us17.list-manage.com/subscribe/post?u=02c984a550db61fb2307d65a8&amp;id=7f1372277d&amp;f_id=00dd63e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-        <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <label for="mce-EMAIL">Email Address</label>
-            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.com" required="">
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none;"></div>
-            <div class="response" id="mce-success-response" style="display:none;"></div>
-          </div>
-          <div aria-hidden="true" style="position:absolute;left:-5000px;">
-            <input type="text" name="b_02c984a550db61fb2307d65a8_7f1372277d" tabindex="-1" value="">
-          </div>
-          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Send My Sample">
-        </div>
-      </form>
-    </div>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  <div class="fade-up" style="margin-top:32px;">
+    <a href="https://grizzops.com/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" rel="noopener" style="display:inline-block;background:#f5c542;color:#0b0b0f;font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#e8b820'" onmouseout="this.style.background='#f5c542'">View Sample GrizzREPORT</a>
   </div>
 </section>
 
