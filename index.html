@@ -646,6 +646,12 @@
   <div style="display:flex;align-items:center;gap:1rem;">
     <button id="lang-toggle" onclick="toggleLang()" style="background:transparent;border:1px solid #555;color:#aaa;padding:0.3rem 0.8rem;border-radius:4px;cursor:pointer;font-size:0.8rem;letter-spacing:0.05em;">ES</button>
     <a href="tel:+15207531741" style="color:#fff;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.95rem;text-decoration:none;letter-spacing:0.03em;">(520) 753-1741</a>
+    <a href="https://www.facebook.com/profile.php?id=61570996226927" target="_blank" aria-label="Facebook" style="display:inline-flex;align-items:center;color:#D4A017;text-decoration:none;padding:6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    </a>
+    <a href="mailto:grizz@grizzops.com" aria-label="Email" style="display:inline-flex;align-items:center;color:#00BFFF;text-decoration:none;padding:6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </a>
     <a href="https://calendly.com/kjkrueger12/30min" target="_blank" class="nav-cta" data-en="Book a Call" data-es="Reservar una Llamada">Book a Call</a>
   </div>
 </nav>
@@ -818,6 +824,52 @@
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" style="padding:100px 48px;max-width:720px;margin:0 auto;">
+  <div class="section-label fade-up">Get in Touch</div>
+  <h2 class="tiers-headline fade-up" style="margin-bottom:40px;">Tell me about your operation.<br><span style="color:var(--gold)">I'll tell you what's broken.</span></h2>
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you" class="fade-up">
+    <input type="hidden" name="form-name" value="contact">
+    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+      <div>
+        <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Name</label>
+        <input type="text" name="name" required style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+      </div>
+      <div>
+        <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Business Name</label>
+        <input type="text" name="business" required style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+      <div>
+        <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Phone</label>
+        <input type="tel" name="phone" style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+      </div>
+      <div>
+        <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">Email</label>
+        <input type="email" name="email" required style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;">
+      </div>
+    </div>
+    <div style="margin-bottom:16px;">
+      <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">How did you hear about us?</label>
+      <select name="referral" style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;appearance:none;">
+        <option value="" disabled selected>Select one...</option>
+        <option value="Referral from a friend">Referral from a friend</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Google search">Google search</option>
+        <option value="Industry contact">Industry contact</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div style="margin-bottom:28px;">
+      <label style="display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:6px;">What's the biggest problem in your operation right now?</label>
+      <textarea name="problem" rows="5" style="width:100%;background:#111;border:1px solid var(--border);padding:12px 16px;color:var(--gold);font-family:Arial,sans-serif;font-size:0.95rem;outline:none;box-sizing:border-box;resize:vertical;"></textarea>
+    </div>
+    <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;">Send It</button>
+  </form>
 </section>
 
 <!-- FINAL CTA -->
