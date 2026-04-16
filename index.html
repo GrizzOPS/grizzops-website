@@ -818,6 +818,7 @@
       <p class="tier-for">For operators booking manually who want it executed.</p>
       <div class="tier-price">$3,500</div>
       <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time project fee</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.2rem;font-style:italic;">GrizzREPORT clients receive $500 off.</div>
       <p class="tier-price-desc">Complete system build for smaller operations. Booking, deposits, and communication — done.</p>
       <a href="https://buy.stripe.com/7sYeVc8fCdU2gB2dLwbEA01" target="_blank" class="tier-btn">Get Started — $3,500</a>
       <div class="tier-arrow">→</div>
@@ -842,14 +843,44 @@
 <section id="proof">
   <div class="proof-inner fade-up">
     <div class="section-label">What People Say</div>
-    <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
-    <p class="proof-quote" style="font-style:italic;">"Grizz was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
-    <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
-      <div style="width:40px;height:1px;background:var(--border);"></div>
-      <p class="proof-attr">Tim Hockhalter · Retired Outfitter</p>
-      <div style="width:40px;height:1px;background:var(--border);"></div>
-    </div>
+
+    <!-- Testimonial rotator -->
+    <div id="testimonial-rotator" style="position:relative;min-height:220px;">
+
+      <div class="testimonial-slide" style="opacity:1;transition:opacity 0.8s ease;">
+        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+        <p class="proof-quote" style="font-style:italic;">"Grizz was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
+        <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+          <p class="proof-attr">Tim Hockhalter · Retired Outfitter</p>
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+        <p class="proof-quote" style="font-style:italic;">"I've known KJ for decades. He's built on grit and honesty and applies that to solving real business problems. He's pushing beyond what most companies think is possible by leveraging AI to create real operational advantage."</p>
+        <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+          <p class="proof-attr">Scott Richard · AI Strategist & National Speaker</p>
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+
+    </div><!-- /testimonial-rotator -->
   </div>
+
+  <script>
+    (function() {
+      var slides = document.querySelectorAll('.testimonial-slide');
+      var current = 0;
+      setInterval(function() {
+        slides[current].style.opacity = '0';
+        current = (current + 1) % slides.length;
+        slides[current].style.opacity = '1';
+      }, 5000);
+    })();
+  </script>
 
 </section>
 
