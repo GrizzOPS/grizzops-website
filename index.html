@@ -857,8 +857,40 @@
         </div>
       </div>
 
+      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+        <p class="proof-quote" style="font-style:italic;">"The GrizzREPORT showed us exactly where we were losing money and where our booking process had gaps we didn't even realize were there. Straightforward, professional, and worth every dollar."</p>
+        <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+          <p class="proof-attr">Caleb Norris, Co-Outfitter · Hidden Creek Outfitters · License #BG366</p>
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+        <div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+        <p class="proof-quote" style="font-style:italic;">"The GrizzREPORT gave us a clear picture of where our operation had gaps we didn't know existed. Professional, straightforward, and exactly what we needed."</p>
+        <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+          <p class="proof-attr">Cayla Norris, Business Manager · Hidden Creek Outfitters</p>
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+
     </div><!-- /testimonial-rotator -->
   </div>
+
+  <script>
+    (function() {
+      var slides = document.querySelectorAll('.testimonial-slide');
+      var current = 0;
+      setInterval(function() {
+        slides[current].style.opacity = '0';
+        current = (current + 1) % slides.length;
+        slides[current].style.opacity = '1';
+      }, 5000);
+    })();
+  </script>
 
 </section>
 
