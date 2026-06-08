@@ -128,10 +128,7 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 - **robots.txt:** Present, allows all crawlers, points to sitemap
 
 ### Language Toggle
-- A Spanish/English toggle (`#lang-toggle` button) exists in the nav.
-- It covers the major hero/about/tiers/CTA sections via a `translations` JS object.
-- FAQ, contact form labels, tier card details, and footer are NOT fully covered by the translation system yet.
-- **⛔ DO NOT WORK ON THIS** during the current sprint. Parked as low priority.
+- **REMOVED permanently** (June 2026 sprint). The ES/EN toggle button, all JS translation logic (`translations` object, `selectors` object, `toggleLang()` function), and all `data-en`/`data-es` attributes have been deleted from index.html. Do not re-add.
 
 ---
 
@@ -159,6 +156,29 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
 | 7 | **GrizzCORE "Get Started" button** — the Stripe link `eVqdR83Zm8zI0C48rcbEA05` was recently updated. Confirm the product in Stripe matches $297/mo. | Pricing accuracy. |
 
+## SITE STATUS — Last updated June 2026
+
+### Testimonials
+- **Tim Hockhalter · Retired Outfitter** — live ✅
+- **Caleb Norris, Co-Outfitter · Hidden Creek Outfitters · License #BG366** — live ✅
+- **Cayla Norris, Business Manager · Hidden Creek Outfitters** — live ✅
+- All three rotate automatically every 5 seconds with a fade transition.
+
+### PageSpeed Scores (recorded June 2026)
+| Page | Desktop | Mobile |
+|---|---|---|
+| index.html | 100 / 96 / 100 / 100 | 98 / 96 / 100 / 100 |
+*(Performance / Accessibility / Best Practices / SEO)*
+
+### Sprint Completed — June 2026
+- AEO/SEO upgrade: meta descriptions, OG tags, Twitter cards, JSON-LD (ProfessionalService, FAQPage, Service ItemList) on all pages
+- Accessibility fixes: `<main>` landmark, form label/input linking, FAQ heading roles, aria-labels, aria-hidden on decorative elements
+- Image optimization: headshot.png 2.7MB → 177KB, horses.jpg 534KB → 173KB
+- Spanish/English toggle permanently removed
+- Color contrast fixes: `#555` → `#888` on footer-copy and proof-placeholder; `#f5c542` → `#D4A017` in util-bar CSS
+- sitemap.xml: removed /404 entry
+- CLAUDE.md created and maintained as source of truth
+
 ## RESOLVED QUESTIONS
 
 | # | Question | Resolution |
@@ -166,4 +186,4 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | 1 | Is the site hosted on Netlify? | ✅ Confirmed Netlify. Account: grizz@grizzops.com, GrizzOPS team. Deployed from GitHub. |
 | 2 | Are contact form submissions arriving? | ✅ Confirmed working. 2 active forms. Last contact submission May 25. |
 | 5 | `#f5c542` color — canonical gold? | ✅ Canonical gold is `#D4A017`. `#f5c542` belongs to GrizzAI (separate project) — do not use on this site. |
-| 6 | Spanish toggle incomplete — priority? | ⛔ LOW PRIORITY. Parked. Do not fix during current sprint. |
+| 6 | Spanish toggle incomplete — priority? | ✅ REMOVED permanently in June 2026 sprint. |
