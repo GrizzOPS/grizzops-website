@@ -108,19 +108,17 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | privacy-policy.html | https://grizzops.com/privacy-policy |
 | 404.html | https://grizzops.com/404 |
 
-### Hosting — ⚠️ UNCONFIRMED — SEE OPEN QUESTIONS
+### Hosting — ✅ CONFIRMED
+- **Host: Netlify** — confirmed live, deployed from GitHub.
+- **Netlify account:** grizz@grizzops.com under GrizzOPS team.
 - **GitHub repo:** https://github.com/GrizzOPS/grizzops-website
-- **There is NO `CNAME` file, NO `netlify.toml`, NO `_redirects`, NO `_headers` file in the repo root.**
-- The absence of a `CNAME` file means **GitHub Pages is not configured** (GitHub Pages requires a CNAME file to serve a custom domain).
-- The `data-netlify="true"` attribute on the contact form and the `action="/thank-you"` redirect are Netlify Forms conventions.
-- **Most likely host: Netlify** — but this is inferred, not confirmed from a config file. Netlify can be connected directly to a GitHub repo via the Netlify dashboard without any config file in the repo.
+- Netlify is connected directly to the GitHub repo via the Netlify dashboard. No config file in the repo is required.
 
-### Contact Form — ⚠️ IMPORTANT
+### Contact Form — ✅ CONFIRMED WORKING
 - The contact form uses `data-netlify="true"` and `data-netlify-honeypot="bot-field"`.
-- **Netlify Forms ONLY capture submissions if Netlify is actually serving the site.**
-- **If the site IS on Netlify:** form submissions are being captured in the Netlify dashboard. ✅
-- **If the site is NOT on Netlify:** form submissions are going nowhere — they submit to `/thank-you` but no data is stored. ❌
-- This must be confirmed (see Open Questions). If not on Netlify, the form needs a different backend.
+- **2 active Netlify forms:** `contact` and `testimonial-submission`.
+- Last confirmed contact form submission: **May 25**.
+- Submissions are captured in the Netlify dashboard under Forms.
 
 ### Other Integrations
 - **Stripe:** Three active payment links (see Services section above)
@@ -133,6 +131,7 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 - A Spanish/English toggle (`#lang-toggle` button) exists in the nav.
 - It covers the major hero/about/tiers/CTA sections via a `translations` JS object.
 - FAQ, contact form labels, tier card details, and footer are NOT fully covered by the translation system yet.
+- **⛔ DO NOT WORK ON THIS** during the current sprint. Parked as low priority.
 
 ---
 
@@ -156,10 +155,15 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 
 | # | Question | Why it matters |
 |---|---|---|
-| 1 | **Is the site hosted on Netlify?** Log into netlify.com and confirm grizzops.com is listed as an active site. | Determines whether the contact form is capturing submissions or silently dropping them. |
-| 2 | **Are contact form submissions arriving?** Check Netlify dashboard → Forms → contact. If no submissions appear, the form is broken. | Direct revenue impact — missed leads. |
 | 3 | **Is the Stripe account live or in test mode?** The three Stripe links are hardcoded. Confirm payments are going to the correct Stripe account. | Direct revenue impact. |
 | 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
-| 5 | **`#f5c542` still appears in the favicon and some buttons** — needs to be replaced with `#D4A017` across all files. | Visual consistency / brand accuracy. |
-| 6 | **Spanish translation is incomplete.** The ES toggle does not cover FAQ, contact form, tier card details, or footer. Is full Spanish coverage a priority? | UX for Spanish-speaking operators. |
 | 7 | **GrizzCORE "Get Started" button** — the Stripe link `eVqdR83Zm8zI0C48rcbEA05` was recently updated. Confirm the product in Stripe matches $297/mo. | Pricing accuracy. |
+
+## RESOLVED QUESTIONS
+
+| # | Question | Resolution |
+|---|---|---|
+| 1 | Is the site hosted on Netlify? | ✅ Confirmed Netlify. Account: grizz@grizzops.com, GrizzOPS team. Deployed from GitHub. |
+| 2 | Are contact form submissions arriving? | ✅ Confirmed working. 2 active forms. Last contact submission May 25. |
+| 5 | `#f5c542` color — canonical gold? | ✅ Canonical gold is `#D4A017`. `#f5c542` belongs to GrizzAI (separate project) — do not use on this site. |
+| 6 | Spanish toggle incomplete — priority? | ⛔ LOW PRIORITY. Parked. Do not fix during current sprint. |
