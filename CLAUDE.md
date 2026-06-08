@@ -170,13 +170,16 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | index.html | 100 / 96 / 100 / 100 | 98 / 96 / 100 / 100 |
 *(Performance / Accessibility / Best Practices / SEO)*
 
-### Sprint Completed — June 2026
+### Sprint Completed — June 2026 ✅ DONE
+
 - AEO/SEO upgrade: meta descriptions, OG tags, Twitter cards, JSON-LD (ProfessionalService, FAQPage, Service ItemList) on all pages
 - Accessibility fixes: `<main>` landmark, form label/input linking, FAQ heading roles, aria-labels, aria-hidden on decorative elements
-- Image optimization: headshot.png 2.7MB → 177KB, horses.jpg 534KB → 173KB
-- Spanish/English toggle permanently removed
 - Color contrast fixes: `#555` → `#888` on footer-copy and proof-placeholder; `#f5c542` → `#D4A017` in util-bar CSS
-- sitemap.xml: removed /404 entry
+- sitemap.xml: removed /404 entry; sitemap resubmitted to Google Search Console
+- Image optimization complete: headshot.png 2.7MB → 177KB, horses.jpg 534KB → 173KB
+- Backup files (.bak) removed from repo
+- Spanish language toggle permanently removed (all HTML, JS, CSS)
+- Final verified PageSpeed scores: Desktop 100/96/100/100, Mobile 98/96/100/100
 - CLAUDE.md created and maintained as source of truth
 
 ## RESOLVED QUESTIONS
