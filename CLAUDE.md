@@ -63,7 +63,7 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | `--black` | `#0a0a0a` | Page background |
 | `--gold` | `#D4A017` | Primary brand color, headings, GrizzREPORTS tier |
 | `--gold-light` | `#e8b820` | Hover states |
-| `#f5c542` | — | Used for favicon, some buttons (brighter gold variant) |
+| ~~`#f5c542`~~ | — | **Do not use.** This belongs to GrizzAI (separate project). Not a GrizzOPS color. |
 | `--blue` | `#00BFFF` | Accent color, GrizzBACKBONE tier, links |
 | `--blue-dark` | `#0088cc` | Blue hover states |
 | `--grey` | `#888` | Muted labels |
@@ -147,7 +147,8 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 7. **Stripe links are live payment links.** Do not change them without explicit instruction from Grizz.
 8. **Keep the site AEO/SEO clean.** Structured, semantic HTML. OG tags on every page. Do not remove or mangle meta tags.
 9. **Do not change prices without explicit written confirmation from Grizz in the session.**
-10. **Flag anything that looks wrong** — broken links, missing favicons on a page, inconsistent copy — rather than silently ignoring it.
+10. **Canonical brand gold is `#D4A017`.** Never use `#f5c542` on this site — that color belongs to GrizzAI (a separate project). If you see `#f5c542` anywhere in this codebase, flag it as a bug.
+11. **Flag anything that looks wrong** — broken links, missing favicons on a page, inconsistent copy — rather than silently ignoring it.
 
 ---
 
@@ -159,6 +160,6 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 | 2 | **Are contact form submissions arriving?** Check Netlify dashboard → Forms → contact. If no submissions appear, the form is broken. | Direct revenue impact — missed leads. |
 | 3 | **Is the Stripe account live or in test mode?** The three Stripe links are hardcoded. Confirm payments are going to the correct Stripe account. | Direct revenue impact. |
 | 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
-| 5 | **Two gold values in use:** `--gold: #D4A017` (CSS variable, used in most of the site) vs `#f5c542` (used in favicon, some buttons). Which is the canonical brand gold? Should they be unified? | Visual consistency. |
+| 5 | **`#f5c542` still appears in the favicon and some buttons** — needs to be replaced with `#D4A017` across all files. | Visual consistency / brand accuracy. |
 | 6 | **Spanish translation is incomplete.** The ES toggle does not cover FAQ, contact form, tier card details, or footer. Is full Spanish coverage a priority? | UX for Spanish-speaking operators. |
 | 7 | **GrizzCORE "Get Started" button** — the Stripe link `eVqdR83Zm8zI0C48rcbEA05` was recently updated. Confirm the product in Stripe matches $297/mo. | Pricing accuracy. |
