@@ -35,12 +35,12 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 ### Tier 2 — GrizzBACKBONE
 - **Badge:** Step 2 — Fix It
 - **Tagline:** Install the System
-- **Price:** $3,500 (one-time project fee) — GrizzREPORT clients receive $500 off ($3,000)
+- **Price:** $3,000 (one-time project fee) — split $1,500 deposit to start · $1,500 on delivery
+- **GrizzREPORT clients:** the $500 already paid comes off the final payment (final payment $1,000)
 - **Description:** Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.
 - **For:** Operators booking manually who want it executed.
-- **Stripe links:**
-  - Standard: https://buy.stripe.com/7sYeVc8fCdU2gB2dLwbEA01 (Get Started — $3,500)
-  - Reports client discount: https://buy.stripe.com/bJe7sK53qbLUacEfTEbEA04 (Reports Client — $3,000)
+- **Stripe link:** https://buy.stripe.com/00wdR92ipfiV3yS3MQbjW03 (Pay Deposit — $1,500)
+  - The former $1,750 deposit link (`5kQdR9aOVc6JglEbfibjW01`) was removed from the site Aug 2026 when the price dropped to $3,000. It may still be live in Stripe — archive it there.
 - **Setup time:** Most operations fully installed and running within 3 weeks of kickoff.
 
 ### Tier 3 — GrizzCORE
