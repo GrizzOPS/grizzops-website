@@ -24,9 +24,8 @@
 All four cards are live on the site. Prices and descriptions below are pulled directly from index.html.
 
 > **Pricing note (Aug 2026):** every published price is the base fee plus a 3% card-processing
-> surcharge ($500 -> $515, $297 -> $306, $1,500 -> $1,545, $4,000 -> $4,120, $2,000 -> $2,060,
-> $800 -> $824). GrizzBACKBONE is the exception: its headline still shows the $3,000 base while
-> its deposit halves show the surcharged $1,545. See Open Question #8.
+> surcharge ($500 -> $515, $297 -> $306, $1,500 -> $1,545, $3,000 -> $3,090, $4,000 -> $4,120,
+> $2,000 -> $2,060, $800 -> $824).
 
 ### Tier 1 — GrizzREPORTS
 - **Badge:** Step 1 — Find the Leak
@@ -40,7 +39,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 ### Tier 2 — GrizzBACKBONE
 - **Badge:** Step 2 — Fix It
 - **Tagline:** Install the System
-- **Price:** $3,000 headline — deposit halves shown as $1,545 to start · $1,545 on delivery
+- **Price:** $3,090 ($3,000 base + 3%) — split $1,545 deposit to start · $1,545 on delivery
 - **GrizzREPORT clients:** the $515 already paid comes off the final payment
 - **Description:** Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.
 - **For:** Operators booking manually who want it executed.
@@ -54,7 +53,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Description:** Complete system build plus a custom website — one main page covering camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired into the booking system. Mobile-friendly and fast-loading.
 - **Add-on:** Additional camp or property pages at $824 each.
 - **Stripe link:** https://buy.stripe.com/cNi28qcvScPY98AfTEbEA0b (Pay Deposit — $2,060)
-- **Note:** Badge, tagline, and "For" line were written by Claude (Aug 2026) — Grizz has not reviewed that copy.
+- **Note:** Badge, tagline, and "For" line were written by Claude and reviewed/approved by Grizz (Aug 2026). This card intentionally has no `tier-note` deposit line — the description already states the 50% split.
 
 ### Tier 3 — GrizzCORE
 - **Badge:** Step 3 — Keep It Running
@@ -174,7 +173,6 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 | 3 | **Is the Stripe account live or in test mode?** The three Stripe links are hardcoded. Confirm payments are going to the correct Stripe account. | Direct revenue impact. |
 | 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
 | 7 | **GrizzCORE "Get Started" button** — link is now `dRmeVc67u2bkesUdLwbEA0d`. Confirm the Stripe product matches $306/mo. | Pricing accuracy. |
-| 8 | **GrizzBACKBONE headline vs deposit halves.** Card shows $3,000 total but $1,545 + $1,545 = $3,090. Should the headline become $3,090, or the deposits drop to $1,500? | Visible math error on a live payment card. |
 
 ## SITE STATUS — Last updated June 2026
 
@@ -210,3 +208,4 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 | 2 | Are contact form submissions arriving? | ✅ Confirmed working. 2 active forms. Last contact submission May 25. |
 | 5 | `#f5c542` color — canonical gold? | ✅ Canonical gold is `#D4A017`. `#f5c542` belongs to GrizzAI (separate project) — do not use on this site. |
 | 6 | Spanish toggle incomplete — priority? | ✅ REMOVED permanently in June 2026 sprint. |
+| 8 | GrizzBACKBONE headline ($3,000) vs deposit halves ($1,545 × 2 = $3,090) | ✅ Grizz chose the $3,090 headline (Aug 2026). Card and JSON-LD now show $3,090. |
