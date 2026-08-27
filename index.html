@@ -377,9 +377,14 @@
 
   .tiers-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     border: 1px solid var(--border);
+  }
+
+  @media (max-width: 1200px) {
+    .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+    .tier-arrow { display: none; }
   }
 
   .tier-card {
@@ -405,7 +410,8 @@
 
   .tier-card:nth-child(1) .tier-badge { background: rgba(212,160,23,0.15); color: var(--gold); }
   .tier-card:nth-child(2) .tier-badge { background: rgba(0,191,255,0.15); color: var(--blue); }
-  .tier-card:nth-child(3) .tier-badge { background: rgba(212,160,23,0.08); color: var(--gold); border: 1px solid var(--border); }
+  .tier-card:nth-child(3) .tier-badge { background: rgba(0,191,255,0.15); color: var(--blue); }
+  .tier-card:nth-child(4) .tier-badge { background: rgba(212,160,23,0.08); color: var(--gold); border: 1px solid var(--border); }
 
   .tier-name {
     font-family: 'Arial Narrow', Arial, sans-serif;
@@ -417,7 +423,8 @@
 
   .tier-card:nth-child(1) .tier-name { color: var(--gold); }
   .tier-card:nth-child(2) .tier-name { color: var(--blue); }
-  .tier-card:nth-child(3) .tier-name { color: var(--white); }
+  .tier-card:nth-child(3) .tier-name { color: var(--blue); }
+  .tier-card:nth-child(4) .tier-name { color: var(--white); }
 
   .tier-tagline {
     font-size: 0.9rem;
@@ -452,7 +459,8 @@
 
   .tier-card:nth-child(1) .tier-price { color: var(--gold); }
   .tier-card:nth-child(2) .tier-price { color: var(--blue); }
-  .tier-card:nth-child(3) .tier-price { color: var(--white); }
+  .tier-card:nth-child(3) .tier-price { color: var(--blue); }
+  .tier-card:nth-child(4) .tier-price { color: var(--white); }
 
   .tier-arrow {
     position: absolute;
@@ -717,7 +725,7 @@
   "url": "https://grizzops.com",
   "telephone": "+15207531741",
   "email": "grizz@grizzops.com",
-  "priceRange": "$500 – $3,000 + $297/mo",
+  "priceRange": "$515 – $4,120 + $306/mo",
   "areaServed": "United States",
   "serviceType": ["Operations Consulting", "Booking System Setup", "Outfitter Business Systems"]
 }
@@ -734,7 +742,7 @@
       "name": "How do the three levels work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start with GrizzREPORTS — a $500 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level."
+        "text": "Start with GrizzREPORTS — a $515 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level."
       }
     },
     {
@@ -806,7 +814,7 @@
       "name": "How is this different from hiring a part-time admin?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A part-time admin costs $1,500 to $2,500 a month, needs training, takes sick days, and quits. The system runs 24 hours a day, never misses a follow-up, and costs less than $300 a month to maintain."
+        "text": "A part-time admin costs $1,500 to $2,500 a month, needs training, takes sick days, and quits. The system runs 24 hours a day, never misses a follow-up, and costs about $300 a month to maintain."
       }
     }
   ]
@@ -829,11 +837,11 @@
         "description": "Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days.",
         "offers": {
           "@type": "Offer",
-          "price": "500",
+          "price": "515",
           "priceCurrency": "USD",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "500",
+            "price": "515",
             "priceCurrency": "USD",
             "unitText": "one-time"
           }
@@ -865,15 +873,35 @@
       "position": 3,
       "item": {
         "@type": "Service",
+        "name": "GrizzBACKBONE + Website",
+        "description": "Complete system build plus a custom website — one main page covering your camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired straight into your booking system. Mobile-friendly and fast-loading. Additional camp or property pages available at $824 each.",
+        "offers": {
+          "@type": "Offer",
+          "price": "4120",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "4120",
+            "priceCurrency": "USD",
+            "unitText": "one-time"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
         "name": "GrizzCORE",
         "description": "Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention. Cancel anytime.",
         "offers": {
           "@type": "Offer",
-          "price": "297",
+          "price": "306",
           "priceCurrency": "USD",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "297",
+            "price": "306",
             "priceCurrency": "USD",
             "unitText": "month"
           }
@@ -977,14 +1005,14 @@
 <section id="tiers">
   <div class="tiers-header fade-up">
     <div class="section-label">How It Works</div>
-    <h2 class="tiers-headline">Three tiers. One direction.<br><span style="color:var(--gold)">Forward.</span></h2>
+    <h2 class="tiers-headline">One direction.<br><span style="color:var(--gold)">Forward.</span></h2>
   </div>
 
   <!-- WHAT YOU ACTUALLY GET -->
   <div class="what-you-get fade-up" style="margin-bottom:64px;">
     <h3 class="tiers-headline" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:20px;">What You Actually Get</h3>
     <p style="max-width:780px;margin-bottom:24px;font-weight:700;font-size:1.15rem;line-height:1.6;color:var(--gold);"><strong style="color:var(--white);">WE'RE NOT A BOOKING AGENCY.</strong> We don't chase down clients for you. We're the 24/7 office that keeps your business running once they reach out — answering, booking, collecting deposits, confirming, and following up so nothing falls through.</p>
-    <p class="tier-desc" style="max-width:780px;margin-bottom:48px;">Three levels, one direction: forward. Start wherever you stand — find the leaks, fix them, or keep the whole thing running while you're in the field. No pressure to climb. Most operators do once they see what the report turns up.</p>
+    <p class="tier-desc" style="max-width:780px;margin-bottom:48px;">One direction: forward. Start wherever you stand — find the leaks, fix them, or keep the whole thing running while you're in the field. No pressure to climb. Most operators do once they see what the report turns up.</p>
 
     <div style="display:grid;gap:36px;">
       <div>
@@ -1009,10 +1037,10 @@
       <div class="tier-name">GrizzREPORTS</div>
       <div class="tier-tagline">Diagnose Before You Fix</div>
       <p class="tier-for">For any outfitter who suspects something's broken but can't pinpoint it.</p>
-      <div class="tier-price">$500</div>
+      <div class="tier-price">$515</div>
       <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time fee</div>
       <p class="tier-price-desc">Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View a sample report.</a></p>
-      <a href="https://buy.stripe.com/fZu9AT3mt1s5d9sgzCbjW00" target="_blank" class="tier-btn">Get Started</a>
+      <a href="https://buy.stripe.com/5kQ9AScvS8zIbgI22ObEA0c" target="_blank" class="tier-btn">Get Started</a>
     </div>
 
     <!-- BACKBONE -->
@@ -1022,10 +1050,23 @@
       <div class="tier-tagline">Install the System</div>
       <p class="tier-for">For operators booking manually who want it executed.</p>
       <div class="tier-price">$3,000</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">$1,500 deposit to start · $1,500 on delivery</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.2rem;font-style:italic;">Already got a GrizzREPORT? The $500 comes off your final payment.</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">$1,545 deposit to start · $1,545 on delivery</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.2rem;font-style:italic;">Already got a GrizzREPORT? The $515 comes off your final payment.</div>
       <p class="tier-price-desc">Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.</p>
-      <a href="https://buy.stripe.com/00wdR92ipfiV3yS3MQbjW03" target="_blank" class="tier-btn">Pay Deposit — $1,500</a>
+      <a href="https://buy.stripe.com/aFacN467ucPY1G85f0bEA0a" target="_blank" class="tier-btn">Pay Deposit — $1,545</a>
+      <div class="tier-arrow">→</div>
+    </div>
+
+    <!-- BACKBONE + WEBSITE -->
+    <div class="tier-card fade-up">
+      <div class="tier-badge">Step 2 — Fix It + Get Found</div>
+      <div class="tier-name">GrizzBACKBONE + Website</div>
+      <div class="tier-tagline">Install the System &amp; the Site</div>
+      <p class="tier-for">For operators who need the system built and a site that sells the hunt.</p>
+      <div class="tier-price">$4,120</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">50% deposit to start · balance invoiced on delivery</div>
+      <p class="tier-price-desc">Complete system build plus a custom website. Booking, deposits, and communication — built, tested, and handed off ready to run. Website includes one main page covering your camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired straight into your booking system. Mobile-friendly and fast-loading. 50% deposit to start, remaining balance invoiced on delivery. Additional camp or property pages available at $824 each.</p>
+      <a href="https://buy.stripe.com/cNi28qcvScPY98AfTEbEA0b" target="_blank" class="tier-btn">Pay Deposit — $2,060</a>
       <div class="tier-arrow">→</div>
     </div>
 
@@ -1035,10 +1076,10 @@
       <div class="tier-name">GrizzCORE</div>
       <div class="tier-tagline">Ongoing Management</div>
       <p class="tier-for">For clients who want it executed without touching it themselves.</p>
-      <div class="tier-price">$297 / mo</div>
+      <div class="tier-price">$306 / mo</div>
       <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">Monthly retainer — 3-month minimum, then month-to-month. One recovered repeat client covers the first month.</div>
       <p class="tier-price-desc">Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention.</p>
-      <a href="https://buy.stripe.com/14AbJ12ip5Il6L43MQbjW05" target="_blank" class="tier-btn">Get Started</a>
+      <a href="https://buy.stripe.com/dRmeVc67u2bkesUdLwbEA0d" target="_blank" class="tier-btn">Get Started</a>
     </div>
   </div>
 </section>
@@ -1107,7 +1148,7 @@
 
     <div class="faq-item">
       <div class="faq-q" role="heading" aria-level="3">How do the three levels work?</div>
-      <p class="faq-a">Start with GrizzREPORTS — a $500 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level.</p>
+      <p class="faq-a">Start with GrizzREPORTS — a $515 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level.</p>
     </div>
 
     <div class="faq-item">
@@ -1152,7 +1193,7 @@
 
     <div class="faq-item" style="border-bottom:none;">
       <div class="faq-q" role="heading" aria-level="3">How is this different from hiring a part-time admin?</div>
-      <p class="faq-a">A part-time admin costs $1,500 to $2,500 a month, needs training, takes sick days, and quits. The system runs 24 hours a day, never misses a follow-up, and costs less than $300 a month to maintain.</p>
+      <p class="faq-a">A part-time admin costs $1,500 to $2,500 a month, needs training, takes sick days, and quits. The system runs 24 hours a day, never misses a follow-up, and costs about $300 a month to maintain.</p>
     </div>
 
   </div>

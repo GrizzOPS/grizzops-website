@@ -21,37 +21,56 @@
 
 ## 2. SERVICES & PRICING
 
-All three tiers are live on the site. Prices and descriptions below are pulled directly from index.html.
+All four cards are live on the site. Prices and descriptions below are pulled directly from index.html.
+
+> **Pricing note (Aug 2026):** every published price is the base fee plus a 3% card-processing
+> surcharge ($500 -> $515, $297 -> $306, $1,500 -> $1,545, $4,000 -> $4,120, $2,000 -> $2,060,
+> $800 -> $824). GrizzBACKBONE is the exception: its headline still shows the $3,000 base while
+> its deposit halves show the surcharged $1,545. See Open Question #8.
 
 ### Tier 1 — GrizzREPORTS
 - **Badge:** Step 1 — Find the Leak
 - **Tagline:** Diagnose Before You Fix
-- **Price:** $500 (one-time project fee)
+- **Price:** $515 (one-time project fee)
 - **Description:** Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days.
 - **For:** Any outfitter who suspects something's broken but can't pinpoint it.
-- **Stripe link:** https://buy.stripe.com/28EfZgeE0cPYacE6j4bEA00
+- **Stripe link:** https://buy.stripe.com/5kQ9AScvS8zIbgI22ObEA0c
 - **Sample report:** /GrizzREPORT_HighCountry_Sample.pdf
 
 ### Tier 2 — GrizzBACKBONE
 - **Badge:** Step 2 — Fix It
 - **Tagline:** Install the System
-- **Price:** $3,000 (one-time project fee) — split $1,500 deposit to start · $1,500 on delivery
-- **GrizzREPORT clients:** the $500 already paid comes off the final payment (final payment $1,000)
+- **Price:** $3,000 headline — deposit halves shown as $1,545 to start · $1,545 on delivery
+- **GrizzREPORT clients:** the $515 already paid comes off the final payment
 - **Description:** Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.
 - **For:** Operators booking manually who want it executed.
-- **Stripe link:** https://buy.stripe.com/00wdR92ipfiV3yS3MQbjW03 (Pay Deposit — $1,500)
-  - The former $1,750 deposit link (`5kQdR9aOVc6JglEbfibjW01`) was removed from the site Aug 2026 when the price dropped to $3,000. It may still be live in Stripe — archive it there.
+- **Stripe link:** https://buy.stripe.com/aFacN467ucPY1G85f0bEA0a (Pay Deposit — $1,545)
 - **Setup time:** Most operations fully installed and running within 3 weeks of kickoff.
+
+### Tier 2b — GrizzBACKBONE + Website
+- **Badge:** Step 2 — Fix It + Get Found
+- **Tagline:** Install the System & the Site
+- **Price:** $4,120 — 50% deposit to start, balance invoiced on delivery
+- **Description:** Complete system build plus a custom website — one main page covering camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired into the booking system. Mobile-friendly and fast-loading.
+- **Add-on:** Additional camp or property pages at $824 each.
+- **Stripe link:** https://buy.stripe.com/cNi28qcvScPY98AfTEbEA0b (Pay Deposit — $2,060)
+- **Note:** Badge, tagline, and "For" line were written by Claude (Aug 2026) — Grizz has not reviewed that copy.
 
 ### Tier 3 — GrizzCORE
 - **Badge:** Step 3 — Keep It Running
 - **Tagline:** Ongoing Management
-- **Price:** $297/mo (monthly retainer — no long-term contract)
+- **Price:** $306/mo (monthly retainer — 3-month minimum, then month-to-month)
 - **Note:** One recovered repeat client covers the first month.
 - **Description:** Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention.
 - **For:** Clients who want it executed without touching it themselves.
-- **Stripe link:** https://buy.stripe.com/eVqdR83Zm8zI0C48rcbEA05
+- **Stripe link:** https://buy.stripe.com/dRmeVc67u2bkesUdLwbEA0d
 - **Cancel policy:** Cancel anytime, no penalty. The built system stays with the client — they own it.
+
+### Retired Stripe links (removed from site — archive in Stripe if still live)
+- `5kQdR9aOVc6JglEbfibjW01` — old BACKBONE $1,750 deposit
+- `00wdR92ipfiV3yS3MQbjW03` — old BACKBONE $1,500 deposit
+- `fZu9AT3mt1s5d9sgzCbjW00` — old GrizzREPORTS $500
+- `14AbJ12ip5Il6L43MQbjW05` — old GrizzCORE $297/mo
 
 ---
 
@@ -154,7 +173,8 @@ All three tiers are live on the site. Prices and descriptions below are pulled d
 |---|---|---|
 | 3 | **Is the Stripe account live or in test mode?** The three Stripe links are hardcoded. Confirm payments are going to the correct Stripe account. | Direct revenue impact. |
 | 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
-| 7 | **GrizzCORE "Get Started" button** — the Stripe link `eVqdR83Zm8zI0C48rcbEA05` was recently updated. Confirm the product in Stripe matches $297/mo. | Pricing accuracy. |
+| 7 | **GrizzCORE "Get Started" button** — link is now `dRmeVc67u2bkesUdLwbEA0d`. Confirm the Stripe product matches $306/mo. | Pricing accuracy. |
+| 8 | **GrizzBACKBONE headline vs deposit halves.** Card shows $3,000 total but $1,545 + $1,545 = $3,090. Should the headline become $3,090, or the deposits drop to $1,500? | Visible math error on a live payment card. |
 
 ## SITE STATUS — Last updated June 2026
 
