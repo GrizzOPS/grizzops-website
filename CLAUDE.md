@@ -54,11 +54,19 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 ### Tier 2b — GrizzBACKBONE + Website
 - **Badge:** Step 2 — Fix It + Get Found
 - **Tagline:** Install the System & the Site
-- **Price:** $4,120 — 50% deposit to start, balance invoiced on delivery
+- **Price:** $4,635 headline. $4,120 for clients who start with GrizzREPORTS — the $515 audit
+  is credited in full. (Set Sept 2026; supersedes the $4,120 headline from Aug 2026.)
+- **Payment split:** $2,320 deposit to start · $2,315 on delivery ($1,800 on delivery if they
+  started with GrizzREPORTS).
 - **Description:** Complete system build plus a custom website — one main page covering camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired into the booking system. Mobile-friendly and fast-loading.
 - **Add-on:** Additional camp or property pages at $824 each.
-- **Stripe link:** https://buy.stripe.com/cNi28qcvScPY98AfTEbEA0b (Pay Deposit — $2,060)
-- **Note:** Badge, tagline, and "For" line were written by Claude and reviewed/approved by Grizz (Aug 2026). This card intentionally has no `tier-note` deposit line — the description already states the 50% split.
+- **Stripe link:** https://buy.stripe.com/00w00i53qdU2acEbDobEA0f (Pay Deposit — $2,320)
+  Verified live in Stripe: "GrizzBACKBONE + Website Bundle Deposit", $2,320.00, GrizzOPS account.
+- **Note:** Badge, tagline, and "For" line were written by Claude and reviewed/approved by Grizz
+  (Aug 2026). As of Sept 2026 this card DOES carry two `tier-note` lines (credited price +
+  payment split), matching the BACKBONE card; the old "50% deposit to start, remaining balance
+  invoiced on delivery" sentence was removed from the description because the split line
+  replaces it and "50%" is inaccurate for the GrizzREPORTS path.
 
 ### Tier 3 — GrizzCORE
 - **Badge:** Step 3 — Keep It Running
@@ -71,6 +79,8 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Cancel policy:** Cancel anytime, no penalty. The built system stays with the client — they own it.
 
 ### Retired Stripe links (removed from site — archive in Stripe if still live)
+- `cNi28qcvScPY98AfTEbEA0b` — old Bundle $2,060 deposit (replaced Sept 2026; CONFIRMED STILL
+  LIVE at time of replacement — archive it in Stripe)
 - `5kQdR9aOVc6JglEbfibjW01` — old BACKBONE $1,750 deposit
 - `00wdR92ipfiV3yS3MQbjW03` — old BACKBONE $1,500 deposit
 - `fZu9AT3mt1s5d9sgzCbjW00` — old GrizzREPORTS $500
@@ -206,6 +216,24 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-09-02 — Bundle repriced to $4,635 + new Stripe deposit link
+- Headline $4,120 -> $4,635. Sub-line added: "$4,120 if you started with GrizzREPORTS. Your
+  $515 audit is credited in full." (4,635 - 515 = 4,120.)
+- Split line ADDED (this card previously had none — the 50% split lived in the description):
+  "$2,320 deposit to start · $2,315 on delivery ($1,800 if you started with GrizzREPORTS)".
+  Checks: 2,320 + 2,315 = 4,635 and 2,320 + 1,800 = 4,120.
+- Removed "50% deposit to start, remaining balance invoiced on delivery." from the description
+  — duplicated by the new split line, and "50%" is wrong for the GrizzREPORTS path.
+- Deposit button: new Stripe link `00w00i53qdU2acEbDobEA0f`, label "Pay Deposit — $2,320".
+  Grizz created the link; it was loaded and read before committing — "GrizzBACKBONE + Website
+  Bundle Deposit", $2,320.00, GrizzOPS account. Amount and product match the button.
+- JSON-LD bundle Offer + UnitPriceSpecification 4120 -> 4635. Also updated `priceRange` on the
+  ProfessionalService block ("$515 – $4,120" -> "$515 – $4,635") since the bundle is the top of
+  that range — Grizz approved this as in-scope.
+- UNCHANGED: REPORTS, BACKBONE and CORE cards and their three Stripe links.
+- Verified: all 3 JSON-LD blocks parse; all four cards read back correct prices/notes/buttons/
+  hrefs from the rendered DOM; exactly 4 Stripe links in the file and the retired one is gone.
 
 ### 2026-09-02 — GrizzBACKBONE repriced to $3,605
 - Headline $3,090 -> $3,605 (explicit written instruction from Grizz in-session, per rule 9).
