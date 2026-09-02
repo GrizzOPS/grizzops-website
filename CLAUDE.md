@@ -39,8 +39,13 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 ### Tier 2 — GrizzBACKBONE
 - **Badge:** Step 2 — Fix It
 - **Tagline:** Install the System
-- **Price:** $3,090 ($3,000 base + 3%) — split $1,545 deposit to start · $1,545 on delivery
-- **GrizzREPORT clients:** the $515 already paid comes off the final payment
+- **Price:** $3,605 headline. $3,090 for clients who start with GrizzREPORTS — the $515 audit
+  is credited in full. (Set Sept 2026; supersedes the $3,090 headline from Aug 2026.)
+- **Payment split:** $1,545 deposit to start · $2,060 on delivery ($1,545 on delivery if they
+  started with GrizzREPORTS). Both paths use the SAME $1,545 deposit Stripe link.
+- **Card copy:** the credited-price sub-line sits directly under the headline. The old italic
+  line "Already got a GrizzREPORT? The $515 comes off your final payment." was deleted as a
+  duplicate of it.
 - **Description:** Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.
 - **For:** Operators booking manually who want it executed.
 - **Stripe link:** https://buy.stripe.com/aFacN467ucPY1G85f0bEA0a (Pay Deposit — $1,545)
@@ -200,6 +205,26 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - Final verified PageSpeed scores: Desktop 100/96/100/100, Mobile 98/96/100/100
 - CLAUDE.md created and maintained as source of truth
 
+## CHANGE LOG
+
+### 2026-09-02 — GrizzBACKBONE repriced to $3,605
+- Headline $3,090 -> $3,605 (explicit written instruction from Grizz in-session, per rule 9).
+- New sub-line under the price: "$3,090 if you start with GrizzREPORTS. Your $515 audit is
+  credited in full." The maths checks: 3,605 - 515 = 3,090.
+- Split line updated to carry both paths: "$1,545 deposit to start · $2,060 on delivery
+  ($1,545 if you started with GrizzREPORTS)". It previously read $1,545 + $1,545 = $3,090,
+  which would have contradicted the new headline on the live card.
+- Deleted the old italic line, now a duplicate of the new sub-line.
+- JSON-LD BACKBONE Offer + UnitPriceSpecification both 3090 -> 3605, so structured data
+  matches the visible price (rule 8 / rich-results risk).
+- UNCHANGED as instructed: the Pay Deposit button and its Stripe link
+  (aFacN467ucPY1G85f0bEA0a), the CORE card, the Bundle card, all other Stripe links.
+- NOTE: the GrizzREPORTS card was checked and contains NO line referencing the BACKBONE price
+  or the credit, so nothing needed updating there. If an upsell line is wanted on that card it
+  still needs writing.
+- Verified: all 3 JSON-LD blocks parse; the only remaining "3,090" in index.html is the
+  intentional credited-price copy; card rendered and checked in a browser.
+
 ## RESOLVED QUESTIONS
 
 | # | Question | Resolution |
@@ -208,4 +233,4 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 | 2 | Are contact form submissions arriving? | ✅ Confirmed working. 2 active forms. Last contact submission May 25. |
 | 5 | `#f5c542` color — canonical gold? | ✅ Canonical gold is `#D4A017`. `#f5c542` belongs to GrizzAI (separate project) — do not use on this site. |
 | 6 | Spanish toggle incomplete — priority? | ✅ REMOVED permanently in June 2026 sprint. |
-| 8 | GrizzBACKBONE headline ($3,000) vs deposit halves ($1,545 × 2 = $3,090) | ✅ Grizz chose the $3,090 headline (Aug 2026). Card and JSON-LD now show $3,090. |
+| 8 | GrizzBACKBONE headline ($3,000) vs deposit halves ($1,545 × 2 = $3,090) | ✅ Grizz chose the $3,090 headline (Aug 2026). SUPERSEDED Sept 2026 — headline is now $3,605, with $3,090 as the GrizzREPORTS-credited price. Card and JSON-LD both show 3605. |
