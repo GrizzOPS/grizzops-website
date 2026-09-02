@@ -72,7 +72,11 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Badge:** Step 3 — Keep It Running
 - **Tagline:** Ongoing Management
 - **Price:** $306/mo (monthly retainer — 3-month minimum, then month-to-month)
-- **Note:** One recovered repeat client covers the first month.
+- **Note:** "A single $6,000 hunt, or two $2,000 charters, covers this for the whole year."
+  (Set Sept 2026, replacing "One recovered repeat client covers the first month.") The claim is
+  against $306/mo x 12 = $3,672/yr — a $6,000 hunt clears it, two $2,000 charters ($4,000)
+  clear it with $328 to spare. If CORE ever goes above $333/mo the charter half stops being
+  true and this line must be rewritten.
 - **Description:** Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention.
 - **For:** Clients who want it executed without touching it themselves.
 - **Stripe link:** https://buy.stripe.com/dRmeVc67u2bkesUdLwbEA0d
@@ -216,6 +220,14 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-09-02 — GrizzCORE note rewritten
+- Replaced the CORE `tier-note` second sentence: "One recovered repeat client covers the first
+  month." -> "A single $6,000 hunt, or two $2,000 charters, covers this for the whole year."
+- Copy only. Price ($306/mo), Stripe link (`dRmeVc67u2bkesUdLwbEA0d`), description and every
+  other card untouched.
+- Math checked against the live price before committing — see the CORE section above for the
+  $333/mo ceiling that keeps the charter claim true.
 
 ### 2026-09-02 — Bundle repriced to $4,635 + new Stripe deposit link
 - Headline $4,120 -> $4,635. Sub-line added: "$4,120 if you started with GrizzREPORTS. Your
