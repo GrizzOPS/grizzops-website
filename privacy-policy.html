@@ -144,12 +144,37 @@
   <p>If you subscribe to our email list, you can unsubscribe at any time via the link in any email.</p>
 
   <h2>Contact</h2>
-  <p>Questions? Email <a href="mailto:grizz@grizzops.com">grizz@grizzops.com</a> or call <a href="tel:+15207531741">(520) 753-1741</a>.</p>
+  <p>Questions? Email <a href="#" data-email="Z3JpenpAZ3JpenpvcHMuY29t"></a> or call <a href="#" data-tel="KzE1MjA3NTMxNzQx" data-tel-text="KDUyMCkgNzUzLTE3NDE="></a>.</p>
 
   <a href="/" class="btn">← Back to Home</a>
 </main>
 
 <footer>© 2026 GrizzOPS. All rights reserved.</footer>
 
+<script>
+(function(){
+  function fill(){
+    document.querySelectorAll('[data-tel]').forEach(function(el){
+      var num = atob(el.getAttribute('data-tel'));
+      el.setAttribute('href', 'tel:' + num);
+      var label = el.getAttribute('data-tel-text');
+      var text = label ? atob(label) : num;
+      var span = el.querySelector('.contact-text');
+      if (span) { span.textContent = text; } else { el.textContent = text; }
+    });
+    document.querySelectorAll('[data-email]').forEach(function(el){
+      var addr = atob(el.getAttribute('data-email'));
+      el.setAttribute('href', 'mailto:' + addr);
+      var span = el.querySelector('.contact-text');
+      if (span) { span.textContent = addr; } else if (!el.querySelector('svg')) { el.textContent = addr; }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fill);
+  } else {
+    fill();
+  }
+})();
+</script>
 </body>
 </html>
