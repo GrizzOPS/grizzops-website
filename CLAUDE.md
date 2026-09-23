@@ -33,7 +33,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Price:** $515 (one-time project fee)
 - **Description:** Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days.
 - **For:** Any outfitter who suspects something's broken but can't pinpoint it.
-- **Stripe link:** https://buy.stripe.com/5kQ9AScvS8zIbgI22ObEA0c
+- **Payment link (GHL):** https://link.fastpaydirect.com/payment-link/6ab327c685ad343a1541b0d0
 - **Sample report:** /GrizzREPORT_HighCountry_Sample.pdf
 
 ### Tier 2 — GrizzBACKBONE
@@ -48,7 +48,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
   duplicate of it.
 - **Description:** Complete system build. Booking, deposits, and communication — built, tested, and handed off ready to run.
 - **For:** Operators booking manually who want it executed.
-- **Stripe link:** https://buy.stripe.com/aFacN467ucPY1G85f0bEA0a (Pay Deposit — $1,545)
+- **Payment link (GHL):** https://link.fastpaydirect.com/payment-link/6ab32c8d9a013c156f1f99b2 (Pay Deposit — $1,545)
 - **Setup time:** Most operations fully installed and running within 3 weeks of kickoff.
 
 ### Tier 2b — GrizzBACKBONE + Website
@@ -60,7 +60,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
   started with GrizzREPORTS).
 - **Description:** Complete system build plus a custom website — one main page covering camp, packages, and pricing, plus a photo gallery, an FAQ section, and an inquiry form wired into the booking system. Mobile-friendly and fast-loading.
 - **Add-on:** Additional camp or property pages at $824 each.
-- **Stripe link:** https://buy.stripe.com/00w00i53qdU2acEbDobEA0f (Pay Deposit — $2,320)
+- **Payment link (GHL):** https://link.fastpaydirect.com/payment-link/6ab32e1c9a013c156f1f99ba (Pay Deposit — $2,320)
   Verified live in Stripe: "GrizzBACKBONE + Website Bundle Deposit", $2,320.00, GrizzOPS account.
 - **Note:** Badge, tagline, and "For" line were written by Claude and reviewed/approved by Grizz
   (Aug 2026). As of Sept 2026 this card DOES carry two `tier-note` lines (credited price +
@@ -79,7 +79,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
   true and this line must be rewritten.
 - **Description:** Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention.
 - **For:** Clients who want it executed without touching it themselves.
-- **Stripe link:** https://buy.stripe.com/dRmeVc67u2bkesUdLwbEA0d
+- **Payment link (GHL):** https://link.fastpaydirect.com/payment-link/6ab32ecf9a013c156f1f99bb
 - **Cancel policy:** Cancel anytime, no penalty. The built system stays with the client — they own it.
 
 ### Retired Stripe links (removed from site — archive in Stripe if still live)
