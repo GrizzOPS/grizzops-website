@@ -13,7 +13,7 @@
 **Contact details (as shown live on site):**
 - Phone: (520) 753-1741 — `tel:+15207531741`
 - Email: grizz@grizzops.com
-- Booking: https://calendly.com/kjkrueger12/30min
+- Booking: https://api.leadconnectorhq.com/widget/booking/ovMgFv2AlGutTzkI7hsU (GHL discovery-call calendar)
 - Facebook: https://www.facebook.com/profile.php?id=61570996226927
 - Domain: https://grizzops.com
 
@@ -159,7 +159,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ### Other Integrations
 - **Stripe:** Three active payment links (see Services section above)
-- **Calendly:** https://calendly.com/kjkrueger12/30min
+- **Booking (GHL):** https://api.leadconnectorhq.com/widget/booking/ovMgFv2AlGutTzkI7hsU — discovery-call calendar (replaced Calendly Oct 2026)
 - **Google Analytics:** G-74L8MG3PK4 (present on all pages)
 - **Sitemap:** /sitemap.xml
 - **robots.txt:** Present, allows all crawlers, points to sitemap
@@ -190,7 +190,7 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 | # | Question | Why it matters |
 |---|---|---|
 | 3 | **Is the Stripe account live or in test mode?** The three Stripe links are hardcoded. Confirm payments are going to the correct Stripe account. | Direct revenue impact. |
-| 4 | **Is the Calendly link active?** https://calendly.com/kjkrueger12/30min — confirm it's open for bookings. | Every CTA on the page points here. |
+| 4 | **Is the GHL booking link active?** https://api.leadconnectorhq.com/widget/booking/ovMgFv2AlGutTzkI7hsU — confirm it's open for bookings. | Every CTA on the page points here. |
 | 7 | **GrizzCORE "Get Started" button** — link is now `dRmeVc67u2bkesUdLwbEA0d`. Confirm the Stripe product matches $306/mo. | Pricing accuracy. |
 
 ## SITE STATUS — Last updated June 2026
@@ -220,6 +220,17 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-10-24 — Booking migrated from Calendly to GoHighLevel (GHL)
+- Replaced all 3 booking CTAs in index.html (nav "Book a Call", hero/CTA "Book a Free Call" x2)
+  from `https://calendly.com/grizzops/30min` to
+  `https://api.leadconnectorhq.com/widget/booking/ovMgFv2AlGutTzkI7hsU`. Button text, classes,
+  `target="_blank"` all left exactly as they were (no `rel` attrs were present; none added).
+- Updated the 3 Calendly references in this file (Booking contact, Integrations, Open Q#4) to the
+  GHL link so the repo has zero remaining "calendly" references.
+- FLAGGED: the old site links used the `grizzops/30min` slug while this file had previously
+  documented `kjkrueger12/30min` — a pre-existing mismatch, now moot since both are retired.
+- No prices, other links, or any other site content changed.
 
 ### 2026-09-02 — GrizzCORE note rewritten
 - Replaced the CORE `tier-note` second sentence: "One recovered repeat client covers the first
