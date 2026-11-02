@@ -227,6 +227,15 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ## CHANGE LOG
 
+### 2026-11-02 — FAQ cancel/ownership wording matched to GrizzCORE Retainer Agreement v2
+- Rewrote the answers to "Do I have to sign a long-term contract?" and "What happens if I want
+  to cancel?" so the cancel terms (3-month minimum, then month-to-month; cancel in writing
+  before the next billing date), data ownership/export, and the $150/hr (2-hr min) migration fee
+  match the GrizzCORE Retainer Agreement v2. Answer text only — questions, styling, and the
+  other 8 FAQs untouched.
+- Updated the matching two answers in the FAQPage JSON-LD to the identical text; all 4 JSON-LD
+  blocks re-validated as parsing, and each HTML answer verified byte-identical to its JSON-LD.
+
 ### 2026-11-02 — Added embedded demo video under hero
 - New `<section id="demo">` between hero and "The Real Problem". Label "See how it works —
   76 seconds." + responsive 16:9 `youtube-nocookie.com` embed of video `xmSlckHF52Y`
