@@ -227,6 +227,14 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ## CHANGE LOG
 
+### 2026-11-02 — "What software do you use?" FAQ rewritten for accuracy
+- Replaced the answer (HTML + FAQPage JSON-LD, identical text) so it's accurate about the manual
+  steps the client actually does by hand: after talking with a client they tap to send the
+  deposit link, they review the contract before it goes out, and they mark the trip done when
+  it's over — everything else (replies, deposit reminders, forms, follow-ups) runs automatically.
+  Replaces the old "you do not need to learn anything / without touching a dashboard" claim.
+- Answer text only; question, styling, and all other FAQs untouched. JSON-LD re-validated.
+
 ### 2026-11-02 — Site now leads with GrizzBACKBONE; GrizzREPORTS made optional
 - Pricing cards reordered to GrizzBACKBONE, GrizzBACKBONE + Website, GrizzCORE, GrizzREPORTS (last).
   GrizzREPORTS kept on the site as an optional last card. Badges renumbered (BACKBONE "Step 1 —
