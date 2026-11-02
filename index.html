@@ -433,10 +433,10 @@
     display: inline-block;
   }
 
-  .tier-card:nth-child(1) .tier-badge { background: rgba(212,160,23,0.15); color: var(--gold); }
+  .tier-card:nth-child(1) .tier-badge { background: rgba(0,191,255,0.15); color: var(--blue); }
   .tier-card:nth-child(2) .tier-badge { background: rgba(0,191,255,0.15); color: var(--blue); }
-  .tier-card:nth-child(3) .tier-badge { background: rgba(0,191,255,0.15); color: var(--blue); }
-  .tier-card:nth-child(4) .tier-badge { background: rgba(212,160,23,0.08); color: var(--gold); border: 1px solid var(--border); }
+  .tier-card:nth-child(3) .tier-badge { background: rgba(212,160,23,0.08); color: var(--gold); border: 1px solid var(--border); }
+  .tier-card:nth-child(4) .tier-badge { background: rgba(212,160,23,0.15); color: var(--gold); }
 
   .tier-name {
     font-family: 'Arial Narrow', Arial, sans-serif;
@@ -446,10 +446,10 @@
     margin-bottom: 12px;
   }
 
-  .tier-card:nth-child(1) .tier-name { color: var(--gold); }
+  .tier-card:nth-child(1) .tier-name { color: var(--blue); }
   .tier-card:nth-child(2) .tier-name { color: var(--blue); }
-  .tier-card:nth-child(3) .tier-name { color: var(--blue); }
-  .tier-card:nth-child(4) .tier-name { color: var(--white); }
+  .tier-card:nth-child(3) .tier-name { color: var(--white); }
+  .tier-card:nth-child(4) .tier-name { color: var(--gold); }
 
   .tier-tagline {
     font-size: 0.9rem;
@@ -482,10 +482,10 @@
     padding-top: 20px;
   }
 
-  .tier-card:nth-child(1) .tier-price { color: var(--gold); }
+  .tier-card:nth-child(1) .tier-price { color: var(--blue); }
   .tier-card:nth-child(2) .tier-price { color: var(--blue); }
-  .tier-card:nth-child(3) .tier-price { color: var(--blue); }
-  .tier-card:nth-child(4) .tier-price { color: var(--white); }
+  .tier-card:nth-child(3) .tier-price { color: var(--white); }
+  .tier-card:nth-child(4) .tier-price { color: var(--gold); }
 
   .tier-arrow {
     position: absolute;
@@ -568,68 +568,6 @@
     padding: 10px 20px;
     font-style: italic;
   }
-
-  /* ── EMAIL CAPTURE ── */
-  #sample {
-    padding: 80px 48px 120px;
-    text-align: center;
-  }
-  #sample > * {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .sample-headline {
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--blue);
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-  }
-
-  .sample-sub {
-    font-size: 0.95rem;
-    color: var(--grey);
-    margin-bottom: 28px;
-  }
-
-  .email-row {
-    display: flex;
-    gap: 0;
-    border: 1px solid var(--border);
-  }
-
-  .email-row input {
-    flex: 1;
-    background: #111;
-    border: none;
-    padding: 14px 20px;
-    color: var(--gold);
-    font-family: Arial, sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-  }
-
-  .email-row input::placeholder { color: #555; }
-
-  .email-row button {
-    background: var(--blue);
-    color: var(--black);
-    border: none;
-    padding: 14px 24px;
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-    white-space: nowrap;
-  }
-
-  .email-row button:hover { background: #33ccff; }
 
   /* ── FINAL CTA ── */
   #cta {
@@ -716,7 +654,7 @@
     .nav-social { display: none !important; }
     .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
     #hero { padding-left: 24px; padding-right: 24px; padding-bottom: 60px; }
-    #problem, #about, #tiers, #proof, #sample, #cta, #contact, #demo { padding-left: 24px; padding-right: 24px; }
+    #problem, #about, #tiers, #proof, #cta, #contact, #demo { padding-left: 24px; padding-right: 24px; }
     .about-inner { grid-template-columns: 1fr; }
     .about-photo { width: 100%; height: 200px; }
     .tiers-grid { grid-template-columns: 1fr; }
@@ -782,7 +720,7 @@
       "name": "How do the three levels work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start with GrizzREPORTS — a $515 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level."
+        "text": "GrizzBACKBONE builds and installs the complete system: booking, deposits, contracts, and follow-up. GrizzCORE keeps it running month to month while you're in the field. If you'd rather see where your operation stands first, GrizzREPORTS is an optional $515 audit, credited in full toward the build."
       }
     },
     {
@@ -790,7 +728,7 @@
       "name": "Do I have to do all three?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Some operators just want the audit to know where they stand. Others want the full build. There is no pressure to move to the next level — but most clients do once they see what the report turns up."
+        "text": "No. GrizzREPORTS is optional. Every GrizzBACKBONE build comes with a 3-month GrizzCORE minimum so the system is watched through its first stretch of real use. After that, GrizzCORE is month-to-month."
       }
     },
     {
@@ -1001,7 +939,7 @@
   <p class="hero-sub" style="position:relative;z-index:2;">GrizzOPS fixes the booking, deposit, and follow-up chaos — built by a former outfitter who's been exactly where you are.</p>
   <div class="hero-actions" style="position:relative;z-index:2;">
     <a href="https://api.leadconnectorhq.com/widget/booking/ovMgFv2AlGutTzkI7hsU" target="_blank" class="btn-primary">Book a Free Call</a>
-    <a href="#sample" class="btn-secondary">Get a sample report first →</a>
+    <a href="#demo" class="btn-secondary">Watch the 76-second demo →</a>
   </div>
   <div class="hero-divider"></div>
 </section>
@@ -1065,13 +1003,9 @@
   <div class="what-you-get fade-up" style="margin-bottom:64px;">
     <h3 class="tiers-headline" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:20px;">What You Actually Get</h3>
     <p style="max-width:780px;margin-bottom:24px;font-weight:700;font-size:1.15rem;line-height:1.6;color:var(--gold);"><strong style="color:var(--white);">WE'RE NOT A BOOKING AGENCY.</strong> We don't chase down clients for you. We're the 24/7 office that keeps your business running once they reach out — answering, booking, collecting deposits, confirming, and following up so nothing falls through.</p>
-    <p class="tier-desc" style="max-width:780px;margin-bottom:48px;">One direction: forward. Start wherever you stand — find the leaks, fix them, or keep the whole thing running while you're in the field. No pressure to climb. Most operators do once they see what the report turns up.</p>
+    <p class="tier-desc" style="max-width:780px;margin-bottom:48px;">GrizzBACKBONE builds the system your operation runs on, custom-fit to how you work. GrizzCORE keeps it running while you're in the field. Not sure where you stand yet? GrizzREPORTS is there if you want an audit first.</p>
 
     <div style="display:grid;gap:36px;">
-      <div>
-        <div class="tier-name" style="font-size:1.4rem;color:var(--gold);margin-bottom:10px;">GrizzREPORTS — Find the Leak</div>
-        <p class="tier-desc" style="max-width:840px;margin-bottom:0;">A complete online audit of your operation, good and bad. We dig into how you take bookings, collect deposits, and follow up — and we read your online reviews and ratings the way your clients do before they ever call. Then we bring every leak to the surface: where trips, money, and reputation are slipping away, and what it's costing you each season. Delivered in 5 business days. No build required.</p>
-      </div>
       <div>
         <div class="tier-name" style="font-size:1.4rem;color:var(--blue);margin-bottom:10px;">GrizzBACKBONE — Fix It</div>
         <p class="tier-desc" style="max-width:840px;margin-bottom:0;">We build the system your business runs on. One calendar so no date gets double-booked. Missed calls get an instant text back. Voicemails land in your inbox as readable text. Deposits requested and tracked — collected however you take money: card, bank transfer, or check. Final payments chased automatically. Pre-trip instructions and post-trip rebooking sent on schedule. Built, tested, and handed over running — custom-fit to how your operation actually works, not a template forced onto your business. Want a site to go with it? We can build that too — ask about the bundle.</p>
@@ -1080,25 +1014,17 @@
         <div class="tier-name" style="font-size:1.4rem;color:var(--white);margin-bottom:10px;">GrizzCORE — Keep It Running</div>
         <p class="tier-desc" style="max-width:840px;margin-bottom:0;">We keep the system running and working while you're in the field. Ongoing monitoring, seasonal updates, and a standing check-in — so you always know it's handling deposits, follow-ups, and rebookings without you touching it.</p>
       </div>
+      <div>
+        <div class="tier-name" style="font-size:1.4rem;color:var(--gold);margin-bottom:10px;">GrizzREPORTS — Find the Leak</div>
+        <p class="tier-desc" style="max-width:840px;margin-bottom:0;">A complete online audit of your operation, good and bad. We dig into how you take bookings, collect deposits, and follow up — and we read your online reviews and ratings the way your clients do before they ever call. Then we bring every leak to the surface: where trips, money, and reputation are slipping away, and what it's costing you each season. Delivered in 5 business days. No build required.</p>
+      </div>
     </div>
   </div>
 
   <div class="tiers-grid">
-    <!-- REPORTS -->
-    <div class="tier-card fade-up">
-      <div class="tier-badge">Step 1 — Find the Leak</div>
-      <div class="tier-name">GrizzREPORTS</div>
-      <div class="tier-tagline">Diagnose Before You Fix</div>
-      <p class="tier-for">For any outfitter who suspects something's broken but can't pinpoint it.</p>
-      <div class="tier-price">$515</div>
-      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time fee</div>
-      <p class="tier-price-desc">Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View a sample report.</a></p>
-      <a href="https://link.fastpaydirect.com/payment-link/6ab327c685ad343a1541b0d0" target="_blank" class="tier-btn">Get Started</a>
-    </div>
-
     <!-- BACKBONE -->
     <div class="tier-card fade-up">
-      <div class="tier-badge">Step 2 — Fix It</div>
+      <div class="tier-badge">Step 1 — Fix It</div>
       <div class="tier-name">GrizzBACKBONE</div>
       <div class="tier-tagline">Install the System</div>
       <p class="tier-for">For operators booking manually who want it executed.</p>
@@ -1112,7 +1038,7 @@
 
     <!-- BACKBONE + WEBSITE -->
     <div class="tier-card fade-up">
-      <div class="tier-badge">Step 2 — Fix It + Get Found</div>
+      <div class="tier-badge">Step 1 — Fix It + Get Found</div>
       <div class="tier-name">GrizzBACKBONE + Website</div>
       <div class="tier-tagline">Install the System &amp; the Site</div>
       <p class="tier-for">For operators who need the system built and a site that sells the trip.</p>
@@ -1126,7 +1052,7 @@
 
     <!-- CORE -->
     <div class="tier-card fade-up">
-      <div class="tier-badge">Step 3 — Keep It Running</div>
+      <div class="tier-badge">Step 2 — Keep It Running</div>
       <div class="tier-name">GrizzCORE</div>
       <div class="tier-tagline">Ongoing Management</div>
       <p class="tier-for">For clients who want it executed without touching it themselves.</p>
@@ -1134,6 +1060,18 @@
       <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">Monthly retainer — 3-month minimum, then month-to-month. A single $6,000 hunt, or two $2,000 charters, covers this for the whole year.</div>
       <p class="tier-price-desc">Monthly system monitoring, seasonal updates, and a standing check-in — you'll always know who to call if something needs attention.</p>
       <a href="https://link.fastpaydirect.com/payment-link/6ab32ecf9a013c156f1f99bb" target="_blank" class="tier-btn">Get Started</a>
+    </div>
+
+    <!-- REPORTS -->
+    <div class="tier-card fade-up">
+      <div class="tier-badge">Optional — Not Sure Where You Stand?</div>
+      <div class="tier-name">GrizzREPORTS</div>
+      <div class="tier-tagline">Diagnose Before You Fix</div>
+      <p class="tier-for">For any outfitter who suspects something's broken but can't pinpoint it.</p>
+      <div class="tier-price">$515</div>
+      <div class="tier-note" style="font-size:0.75rem;color:#aaa;margin-top:0.4rem;">One-time fee</div>
+      <p class="tier-price-desc">Full audit of your booking, deposit, and follow-up system. Delivered within 5 business days. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View a sample report.</a></p>
+      <a href="https://link.fastpaydirect.com/payment-link/6ab327c685ad343a1541b0d0" target="_blank" class="tier-btn">Get Started</a>
     </div>
   </div>
 </section>
@@ -1202,12 +1140,12 @@
 
     <div class="faq-item">
       <div class="faq-q" role="heading" aria-level="3">How do the three levels work?</div>
-      <p class="faq-a">Start with GrizzREPORTS — a $515 audit that shows exactly where your operation is leaking money. If you want it fixed, GrizzBACKBONE builds and installs the complete system. GrizzCORE keeps it running month to month while you're in the field. You can stop at any level.</p>
+      <p class="faq-a">GrizzBACKBONE builds and installs the complete system: booking, deposits, contracts, and follow-up. GrizzCORE keeps it running month to month while you're in the field. If you'd rather see where your operation stands first, GrizzREPORTS is an optional $515 audit, credited in full toward the build.</p>
     </div>
 
     <div class="faq-item">
       <div class="faq-q" role="heading" aria-level="3">Do I have to do all three?</div>
-      <p class="faq-a">No. Some operators just want the audit to know where they stand. Others want the full build. There is no pressure to move to the next level — but most clients do once they see what the report turns up.</p>
+      <p class="faq-a">No. GrizzREPORTS is optional. Every GrizzBACKBONE build comes with a 3-month GrizzCORE minimum so the system is watched through its first stretch of real use. After that, GrizzCORE is month-to-month.</p>
     </div>
 
     <div class="faq-item">
@@ -1278,15 +1216,6 @@
     #faq { padding: 72px 24px; }
   }
 </style>
-
-<!-- EMAIL CAPTURE -->
-<section id="sample">
-  <div class="sample-headline fade-up">Not ready to call yet?</div>
-  <p class="sample-sub fade-up">Get a real sample GrizzREPORT — see exactly what a broken booking system looks like before you commit to anything. <a href="/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" style="color:var(--blue);text-decoration:underline;">View the sample here.</a></p>
-  <div class="fade-up" style="margin-top:32px;">
-    <a href="https://grizzops.com/GrizzREPORT_HighCountry_Sample.pdf" target="_blank" rel="noopener" style="display:inline-block;background:#f5c542;color:#0b0b0f;font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#e8b820'" onmouseout="this.style.background='#f5c542'">View Sample GrizzREPORT</a>
-  </div>
-</section>
 
 <!-- CONTACT FORM -->
 <section id="contact" style="padding:100px 48px;max-width:720px;margin:0 auto;">

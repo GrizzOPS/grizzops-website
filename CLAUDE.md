@@ -227,6 +227,23 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ## CHANGE LOG
 
+### 2026-11-02 — Site now leads with GrizzBACKBONE; GrizzREPORTS made optional
+- Pricing cards reordered to GrizzBACKBONE, GrizzBACKBONE + Website, GrizzCORE, GrizzREPORTS (last).
+  GrizzREPORTS kept on the site as an optional last card. Badges renumbered (BACKBONE "Step 1 —
+  Fix It", Website "Step 1 — Fix It + Get Found", CORE "Step 2 — Keep It Running", REPORTS
+  "Optional — Not Sure Where You Stand?"). Per-card colors preserved by remapping the
+  `:nth-child` badge/name/price CSS to the new positions — no visual color change to any card.
+  All prices, credited-price lines, sample-report link, payment links, and arrows unchanged.
+- "What You Actually Get" descriptions reordered to BACKBONE, CORE, REPORTS; intro paragraph
+  rewritten to lead with BACKBONE and frame REPORTS as optional.
+- Hero secondary button changed from "Get a sample report first →" (#sample) to
+  "Watch the 76-second demo →" (#demo).
+- FAQ "How do the three levels work?" and "Do I have to do all three?" rewritten (HTML + FAQPage
+  JSON-LD, identical text) to lead with BACKBONE and the 3-month GrizzCORE minimum.
+- Sample report section (`<section id="sample">`) and its CSS removed entirely; nothing links to
+  `#sample` anymore. The /GrizzREPORT_HighCountry_Sample.pdf sample link still lives on the
+  REPORTS card.
+
 ### 2026-11-02 — FAQ cancel/ownership wording matched to GrizzCORE Retainer Agreement v2
 - Rewrote the answers to "Do I have to sign a long-term contract?" and "What happens if I want
   to cancel?" so the cancel terms (3-month minimum, then month-to-month; cancel in writing
