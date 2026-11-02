@@ -227,6 +227,18 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ## CHANGE LOG
 
+### 2026-11-02 — Removed "never touch it" claims to match the software FAQ
+- Three spots updated so they no longer claim the client never touches the system, matching the
+  rewritten "What software do you use?" FAQ (client does a few manual steps by hand):
+  1. FAQ "What if I'm not tech savvy?" (HTML + FAQPage JSON-LD, identical text) — now names the
+     few manual steps (send deposit link, check contract, mark trip done) instead of "you do not
+     touch the system… runs on its own."
+  2. GrizzCORE description in "What You Actually Get" — "without you touching it" → "and you're
+     never the one fixing it."
+  3. GrizzCORE pricing card "For" line — "want it executed without touching it themselves" →
+     "want the system kept running without maintaining it themselves."
+- Text only; styling and all other content untouched. JSON-LD re-validated.
+
 ### 2026-11-02 — "What software do you use?" FAQ rewritten for accuracy
 - Replaced the answer (HTML + FAQPage JSON-LD, identical text) so it's accurate about the manual
   steps the client actually does by hand: after talking with a client they tap to send the
