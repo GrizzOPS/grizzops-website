@@ -164,6 +164,12 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Sitemap:** /sitemap.xml
 - **robots.txt:** Present, allows all crawlers, points to sitemap
 
+### Demo Video
+- `<section id="demo">` sits directly under the hero, before "The Real Problem".
+- Privacy-enhanced YouTube embed (`youtube-nocookie.com`), **YouTube ID: `xmSlckHF52Y`** (https://youtu.be/xmSlckHF52Y).
+- Responsive 16:9 player (`.demo-frame`, `aspect-ratio:16/9`, max-width 900px, centered, 8px radius). Label above it: "See how it works — 76 seconds."
+- A matching `VideoObject` JSON-LD block is in `<head>` (4th structured-data block).
+
 ### Language Toggle
 - **REMOVED permanently** (June 2026 sprint). The ES/EN toggle button, all JS translation logic (`translations` object, `selectors` object, `toggleLang()` function), and all `data-en`/`data-es` attributes have been deleted from index.html. Do not re-add.
 
@@ -220,6 +226,18 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-11-02 — Added embedded demo video under hero
+- New `<section id="demo">` between hero and "The Real Problem". Label "See how it works —
+  76 seconds." + responsive 16:9 `youtube-nocookie.com` embed of video `xmSlckHF52Y`
+  (`?rel=0`, `loading="lazy"`, `allowfullscreen`, title "GrizzOPS demo — booking systems for
+  outfitters"). Player max-width 900px centered, 8px radius, 1px `--border`; full-width with
+  24px side padding on phones (added `#demo` to the existing mobile padding rule).
+- Added a 4th JSON-LD block (`VideoObject`) in `<head>`: name "GrizzOPS Demo — Booking Systems
+  for Outfitters", embedUrl (nocookie), contentUrl (youtu.be), thumbnail hqdefault.jpg,
+  uploadDate 2026-11-02, duration PT1M16S.
+- No other section, text, link, button, or price changed. Checked at desktop + phone widths:
+  video loads/plays, no horizontal scroll, nothing else shifted.
 
 ### 2026-10-24 — Booking migrated from Calendly to GoHighLevel (GHL)
 - Replaced all 3 booking CTAs in index.html (nav "Book a Call", hero/CTA "Book a Free Call" x2)

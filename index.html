@@ -234,6 +234,31 @@
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
   }
 
+  /* ── DEMO VIDEO ── */
+  #demo {
+    padding: 80px 48px 0;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .demo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .demo-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
   /* ── PROBLEM ── */
   #problem {
     padding: 100px 48px;
@@ -691,7 +716,7 @@
     .nav-social { display: none !important; }
     .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
     #hero { padding-left: 24px; padding-right: 24px; padding-bottom: 60px; }
-    #problem, #about, #tiers, #proof, #sample, #cta, #contact { padding-left: 24px; padding-right: 24px; }
+    #problem, #about, #tiers, #proof, #sample, #cta, #contact, #demo { padding-left: 24px; padding-right: 24px; }
     .about-inner { grid-template-columns: 1fr; }
     .about-photo { width: 100%; height: 200px; }
     .tiers-grid { grid-template-columns: 1fr; }
@@ -728,6 +753,21 @@
   "priceRange": "$515 – $4,635 + $306/mo",
   "areaServed": "United States",
   "serviceType": ["Operations Consulting", "Booking System Setup", "Outfitter Business Systems"]
+}
+</script>
+
+<!-- JSON-LD: VideoObject -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "GrizzOPS Demo — Booking Systems for Outfitters",
+  "description": "A short demo of how GrizzOPS fixes broken booking, deposit, and follow-up systems for hunting outfitters, fishing charters, guides, and lodges.",
+  "thumbnailUrl": "https://i.ytimg.com/vi/xmSlckHF52Y/hqdefault.jpg",
+  "uploadDate": "2026-11-02",
+  "duration": "PT1M16S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/xmSlckHF52Y",
+  "contentUrl": "https://youtu.be/xmSlckHF52Y"
 }
 </script>
 
@@ -964,6 +1004,19 @@
     <a href="#sample" class="btn-secondary">Get a sample report first →</a>
   </div>
   <div class="hero-divider"></div>
+</section>
+
+<!-- DEMO VIDEO -->
+<section id="demo">
+  <div class="section-label fade-up">See how it works — 76 seconds.</div>
+  <div class="demo-frame fade-up">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/xmSlckHF52Y?rel=0"
+      title="GrizzOPS demo — booking systems for outfitters"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
 </section>
 
 <!-- PROBLEM -->
