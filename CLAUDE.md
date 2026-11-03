@@ -227,6 +227,26 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 
 ## CHANGE LOG
 
+### 2026-11-02 — Accuracy pass: features as options, "I" not "we", broader operation types
+- **Voice:** site now speaks as a solo operator ("I/me/my") instead of "we/us/our" everywhere it
+  refers to GrizzOPS/KJ — the booking-agency line ("I'M NOT A BOOKING AGENT. I don't chase down
+  clients…"), GrizzCORE + GrizzREPORTS "What You Actually Get" descriptions, the GrizzREPORT FAQ,
+  the cancel FAQ export line, the FAQ heading ("Questions I get on every call"), the contact
+  headline ("whether I've solved it before"), and the matching FAQPage JSON-LD answers.
+  Testimonials (client voice) and the "GrizzOPS" business name left unchanged. Meta/OG/Twitter
+  descriptions and the ProfessionalService / VideoObject / ItemList structured data were already
+  third-person with "GrizzOPS" — no "we" there to change.
+- **GrizzBACKBONE features = options, not guarantees:** the "What You Actually Get" BACKBONE
+  paragraph now frames the calendar/missed-call-text/voicemail-to-text/deposit/payment/follow-up
+  features as "depending on how you run, it can include… you pick what fits; I leave out what
+  doesn't," and adds that texting features require a separate carrier registration billed
+  separately.
+- **Broader fit + accuracy tweaks:** "Will this work for my type of operation?" now names dude
+  ranches / "booked outdoor business"; setup-time FAQ notes it depends on how fast client info
+  arrives; part-time-admin FAQ softened ("can quit", "sends every follow-up on schedule").
+- Text only — all prices, links, payment buttons, and styling unchanged. JSON-LD re-validated
+  (4 blocks parse; all 10 FAQ answers match HTML byte-for-byte).
+
 ### 2026-11-02 — Removed "never touch it" claims to match the software FAQ
 - Three spots updated so they no longer claim the client never touches the system, matching the
   rewritten "What software do you use?" FAQ (client does a few manual steps by hand):
