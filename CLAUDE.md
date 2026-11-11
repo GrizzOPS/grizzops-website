@@ -202,10 +202,14 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 ## SITE STATUS — Last updated June 2026
 
 ### Testimonials
+- **Bill Perry · Owner, Hidden Creek Outfitters** — live ✅ (FIRST in "What People Say"). Verbatim
+  except two spelling fixes to "GrizzOPS"; first two paragraphs always shown, the last paragraph
+  sits behind a "Read more" button. No phone/email for Bill, no review/rating structured data.
 - **Tim Hockhalter · Retired Outfitter** — live ✅
 - **Caleb Norris, Co-Outfitter · Hidden Creek Outfitters · License #BG366** — live ✅
 - **Cayla Norris, Business Manager · Hidden Creek Outfitters** — live ✅
-- All three rotate automatically every 5 seconds with a fade transition.
+- All four rotate automatically every 5 seconds with a fade transition. The rotator holds the
+  current card while Bill's is expanded, while a mouse hovers it, or while it has keyboard focus.
 
 ### PageSpeed Scores (recorded June 2026)
 | Page | Desktop | Mobile |
@@ -226,6 +230,21 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-11-11 — Added Bill Perry testimonial (first in "What People Say")
+- New first card: Bill Perry · Owner, Hidden Creek Outfitters. Bill's words verbatim except the
+  two "GrizzOPS" spelling fixes he approved. Paragraphs 1–2 always visible; paragraph 3 ("As being
+  an outfitter yourself…") is behind a "Read more" / "Read less" `<button>` with `aria-expanded`
+  + `aria-controls="bill-perry-more"` (blue accent, 44px tap target, `.read-more-btn` CSS).
+  Same card markup/classes as the other three (quote mark, `.proof-quote`, `.proof-attr`).
+- Tim's card moved from the "shown first" slot to the stacked slot (wrapper style only; its text
+  is unchanged). Tim, Caleb and Cayla text and name lines untouched.
+- Rotator script updated so the button works: hidden slides get `pointer-events:none`, `inert`
+  and `aria-hidden` (they're stacked on top and were catching clicks), and rotation pauses while
+  Bill's card is expanded, mouse-hovered, or keyboard-focused. Still 5s per card otherwise.
+- No phone/email for Bill; no Review/AggregateRating structured data added.
+- Checked: desktop + true 390px phone viewport (iframe), mouse click, phone tap, and keyboard
+  Enter all expand/collapse; no horizontal scroll; all 4 JSON-LD blocks still parse.
 
 ### 2026-11-02 — Accuracy pass: features as options, "I" not "we", broader operation types
 - **Voice:** site now speaks as a solo operator ("I/me/my") instead of "we/us/our" everywhere it

@@ -559,6 +559,26 @@
     text-transform: uppercase;
   }
 
+  .read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .read-more-btn:hover { color: #fff; }
+  .read-more-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
   .proof-placeholder {
     display: inline-block;
     margin-top: 40px;
@@ -1086,6 +1106,21 @@
 
       <div class="testimonial-slide" style="opacity:1;transition:opacity 0.8s ease;">
         <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
+        <p class="proof-quote" style="font-style:italic;">"Just wanted to drop you a note and say thank you for setting up my 2 websites with GrizzOPS.</p>
+        <p class="proof-quote" style="font-style:italic;">"It really has made it simple from first contact, sending contracts, requesting deposits and having them go to my bank. It really frees me up to do the other things that business requires. Another thing I really like is the timely reminders it gives me, no more having to carry notes and forget them!</p>
+        <div id="bill-perry-more" hidden>
+          <p class="proof-quote" style="font-style:italic;">"As being an outfitter yourself, you know what is needed to help guys like me to become more streamlined with bookings, I will recommend GrizzOPS to anyone, it's a real time saver and things don't slip through the cracks as they sometimes do."</p>
+        </div>
+        <button type="button" class="read-more-btn" aria-expanded="false" aria-controls="bill-perry-more">Read more</button>
+        <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+          <p class="proof-attr">Bill Perry · Owner, Hidden Creek Outfitters</p>
+          <div style="width:40px;height:1px;background:var(--border);"></div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+        <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
         <p class="proof-quote" style="font-style:italic;">"K.J. was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
         <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
           <div style="width:40px;height:1px;background:var(--border);"></div>
@@ -1119,13 +1154,46 @@
 
   <script>
     (function() {
+      var rotator = document.getElementById('testimonial-rotator');
       var slides = document.querySelectorAll('.testimonial-slide');
       var current = 0;
+      var expanded = false, hovering = false, keyboardFocus = false;
+
+      // Only the visible slide can be clicked or tabbed into; the hidden ones are stacked on top
+      function show(i) {
+        slides.forEach(function(slide, idx) {
+          var on = idx === i;
+          slide.style.opacity = on ? '1' : '0';
+          slide.style.pointerEvents = on ? 'auto' : 'none';
+          slide.inert = !on;
+          if (on) slide.removeAttribute('aria-hidden'); else slide.setAttribute('aria-hidden', 'true');
+        });
+      }
+      show(current);
+
+      // Hold the current slide while it's expanded, hovered with a mouse, or keyboard-focused
+      rotator.addEventListener('pointerenter', function(e) { if (e.pointerType === 'mouse') hovering = true; });
+      rotator.addEventListener('pointerleave', function(e) { if (e.pointerType === 'mouse') hovering = false; });
+      rotator.addEventListener('focusin', function(e) { keyboardFocus = e.target.matches(':focus-visible'); });
+      rotator.addEventListener('focusout', function() { keyboardFocus = false; });
+
       setInterval(function() {
-        slides[current].style.opacity = '0';
+        if (expanded || hovering || keyboardFocus) return;
         current = (current + 1) % slides.length;
-        slides[current].style.opacity = '1';
+        show(current);
       }, 5000);
+
+      // Read more / Read less
+      rotator.querySelectorAll('.read-more-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          var open = btn.getAttribute('aria-expanded') !== 'true';
+          btn.setAttribute('aria-expanded', String(open));
+          panel.hidden = !open;
+          btn.textContent = open ? 'Read less' : 'Read more';
+          expanded = open;
+        });
+      });
     })();
   </script>
 
