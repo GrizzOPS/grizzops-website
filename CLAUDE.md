@@ -208,8 +208,15 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - **Tim Hockhalter · Retired Outfitter** — live ✅
 - **Caleb Norris, Co-Outfitter · Hidden Creek Outfitters · License #BG366** — live ✅
 - **Cayla Norris, Business Manager · Hidden Creek Outfitters** — live ✅
-- All four rotate automatically every 5 seconds with a fade transition. The rotator holds the
-  current card while Bill's is expanded, while a mouse hovers it, or while it has keyboard focus.
+- **Rotator behavior:** fades between the four cards. Each card's time is set by `data-duration`
+  on its slide — Bill 12s, the others 7s — via a `setTimeout` that restarts fresh every time a card
+  shows (no `setInterval`). It does NOT pause on mouse hover. It pauses only while Bill's Read more
+  is expanded (Read less restarts his full 12s) or while a keyboard user has focus in the carousel
+  (full time again when focus leaves). Prev/next arrows + one dot per card (gold = active), all real
+  44px buttons with aria-labels; clicking any of them jumps there and restarts that card's timer.
+  Arrows sit either side of the quote at ≥1000px and flank the dot row below that. The box sizes to
+  the showing card (0.5s height transition, `ResizeObserver`). Hidden cards are inert +
+  aria-hidden. With "reduce motion" on, no auto-rotation — arrows and dots only.
 
 ### PageSpeed Scores (recorded June 2026)
 | Page | Desktop | Mobile |
@@ -230,6 +237,19 @@ All four cards are live on the site. Prices and descriptions below are pulled di
 - CLAUDE.md created and maintained as source of truth
 
 ## CHANGE LOG
+
+### 2026-11-11 — Testimonial rotator timing fixed, arrows + dots added
+- Rotator: 12s Bill / 7s others with a fresh `setTimeout` per card; pauses only on Bill's Read more
+  expanded or keyboard focus (never on hover); prev/next arrows + dots; box height follows the
+  showing card (no blank gap); no auto-rotate under prefers-reduced-motion. Full spec in SITE STATUS →
+  Testimonials. All four testimonials' wording and order unchanged.
+- Changes confined to the `#proof` section plus a new `/* ── TESTIMONIAL ROTATOR CONTROLS ── */`
+  CSS block beside `.read-more-btn`.
+- Verified in Chrome (desktop + true 390px phone frame): rotates with the mouse over it, measured
+  12.01s / 7.01s / 7.02s / 7.01s; Read more held 16s+, Read less → next card at +12.00s; arrow and
+  dot clicks/taps land correctly and restart the timer (+7.00s); keyboard Tab/Enter works and pauses
+  until focus leaves; box height = card height on every card; no overlap or sideways scroll on phone;
+  reduce-motion stays put past 14s while arrows still work.
 
 ### 2026-11-11 — Added Bill Perry testimonial (first in "What People Say")
 - New first card: Bill Perry · Owner, Hidden Creek Outfitters. Bill's words verbatim except the

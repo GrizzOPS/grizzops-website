@@ -579,6 +579,63 @@
   .read-more-btn:hover { color: #fff; }
   .read-more-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
+  /* ── TESTIMONIAL ROTATOR CONTROLS ── */
+  .tr-wrap { position: relative; }
+  #testimonial-rotator.tr-ready { transition: height 0.5s ease; }
+  .tr-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 24px;
+  }
+  .tr-dots { display: flex; align-items: center; justify-content: center; }
+  .tr-dot {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .tr-dot::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #666;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .tr-dot:hover::before { background: var(--blue); }
+  .tr-dot[aria-current="true"]::before { background: var(--gold); transform: scale(1.3); }
+  .tr-arrow {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tr-arrow:hover { color: var(--blue); border-color: var(--blue); }
+  .tr-dot:focus-visible, .tr-arrow:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  /* Wide screens: arrows sit either side of the quote, vertically centred on it (68px = controls row) */
+  @media (min-width: 1000px) {
+    .tr-arrow { position: absolute; top: calc((100% - 68px) / 2 - 22px); }
+    .tr-prev { left: -76px; }
+    .tr-next { right: -76px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #testimonial-rotator.tr-ready { transition: none; }
+  }
+
   .proof-placeholder {
     display: inline-block;
     margin-top: 40px;
@@ -1102,9 +1159,10 @@
     <div class="section-label">What People Say</div>
 
     <!-- Testimonial rotator -->
-    <div id="testimonial-rotator" style="position:relative;min-height:220px;">
+    <div class="tr-wrap" role="group" aria-roledescription="carousel" aria-label="Testimonials">
+    <div id="testimonial-rotator" style="position:relative;overflow:hidden;" aria-live="off">
 
-      <div class="testimonial-slide" style="opacity:1;transition:opacity 0.8s ease;">
+      <div class="testimonial-slide" data-duration="12000" style="opacity:1;transition:opacity 0.8s ease;">
         <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
         <p class="proof-quote" style="font-style:italic;">"Just wanted to drop you a note and say thank you for setting up my 2 websites with GrizzOPS.</p>
         <p class="proof-quote" style="font-style:italic;">"It really has made it simple from first contact, sending contracts, requesting deposits and having them go to my bank. It really frees me up to do the other things that business requires. Another thing I really like is the timely reminders it gives me, no more having to carry notes and forget them!</p>
@@ -1119,7 +1177,7 @@
         </div>
       </div>
 
-      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+      <div class="testimonial-slide" data-duration="7000" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
         <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
         <p class="proof-quote" style="font-style:italic;">"K.J. was a great guide that got along with clients very well. He is very knowledgeable and articulate and paid attention to details. He knows the ins and outs of the outfitting business and am sure he would be very helpful to anyone who would like to improve their business."</p>
         <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
@@ -1129,7 +1187,7 @@
         </div>
       </div>
 
-      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+      <div class="testimonial-slide" data-duration="7000" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
         <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
         <p class="proof-quote" style="font-style:italic;">"The GrizzREPORT showed us exactly where we were losing money and where our booking process had gaps we didn't even realize were there. Straightforward, professional, and worth every dollar."</p>
         <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
@@ -1139,7 +1197,7 @@
         </div>
       </div>
 
-      <div class="testimonial-slide" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
+      <div class="testimonial-slide" data-duration="7000" style="opacity:0;transition:opacity 0.8s ease;position:absolute;top:0;left:0;width:100%;">
         <div aria-hidden="true" style="font-family:'Arial Narrow',Arial,sans-serif;font-size:4rem;line-height:0.8;color:var(--gold);opacity:0.25;margin-bottom:8px;">"</div>
         <p class="proof-quote" style="font-style:italic;">"The GrizzREPORT gave us a clear picture of where our operation had gaps we didn't know existed. Professional, straightforward, and exactly what we needed."</p>
         <div style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
@@ -1150,16 +1208,59 @@
       </div>
 
     </div><!-- /testimonial-rotator -->
+    <div class="tr-controls" hidden>
+      <button type="button" class="tr-arrow tr-prev" aria-label="Previous testimonial"><span aria-hidden="true">←</span></button>
+      <div class="tr-dots"></div>
+      <button type="button" class="tr-arrow tr-next" aria-label="Next testimonial"><span aria-hidden="true">→</span></button>
+    </div>
+    </div><!-- /tr-wrap -->
   </div>
 
   <script>
     (function() {
+      var wrap = document.querySelector('.tr-wrap');
       var rotator = document.getElementById('testimonial-rotator');
-      var slides = document.querySelectorAll('.testimonial-slide');
-      var current = 0;
-      var expanded = false, hovering = false, keyboardFocus = false;
+      var slides = rotator.querySelectorAll('.testimonial-slide');
+      var controls = wrap.querySelector('.tr-controls');
+      var dotsBox = wrap.querySelector('.tr-dots');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var current = 0, timer = null;
+      var expanded = false, keyboardFocus = false;
+      var dots = [];
 
-      // Only the visible slide can be clicked or tabbed into; the hidden ones are stacked on top
+      // One dot per testimonial
+      slides.forEach(function(slide, idx) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'tr-dot';
+        dot.setAttribute('aria-label', 'Show testimonial ' + (idx + 1) + ' of ' + slides.length);
+        dot.addEventListener('click', function() { userGo(idx); });
+        dotsBox.appendChild(dot);
+        dots.push(dot);
+      });
+      wrap.querySelector('.tr-prev').addEventListener('click', function() { userGo(current - 1); });
+      wrap.querySelector('.tr-next').addEventListener('click', function() { userGo(current + 1); });
+      controls.hidden = false;
+
+      // The box takes the height of the slide that's showing; every slide stacks absolutely
+      function fit() { rotator.style.height = slides[current].offsetHeight + 'px'; }
+      fit();
+      slides.forEach(function(slide) {
+        slide.style.position = 'absolute';
+        slide.style.top = '0';
+        slide.style.left = '0';
+        slide.style.width = '100%';
+      });
+      fit();
+      requestAnimationFrame(function() { rotator.classList.add('tr-ready'); });
+      if ('ResizeObserver' in window) {
+        var ro = new ResizeObserver(fit);
+        slides.forEach(function(slide) { ro.observe(slide); });
+      } else {
+        window.addEventListener('resize', fit);
+      }
+
+      // Only the showing slide can be clicked or tabbed into; the hidden ones are stacked on top
       function show(i) {
         slides.forEach(function(slide, idx) {
           var on = idx === i;
@@ -1168,32 +1269,63 @@
           slide.inert = !on;
           if (on) slide.removeAttribute('aria-hidden'); else slide.setAttribute('aria-hidden', 'true');
         });
+        dots.forEach(function(dot, idx) {
+          if (idx === i) dot.setAttribute('aria-current', 'true'); else dot.removeAttribute('aria-current');
+        });
+        fit();
       }
-      show(current);
 
-      // Hold the current slide while it's expanded, hovered with a mouse, or keyboard-focused
-      rotator.addEventListener('pointerenter', function(e) { if (e.pointerType === 'mouse') hovering = true; });
-      rotator.addEventListener('pointerleave', function(e) { if (e.pointerType === 'mouse') hovering = false; });
-      rotator.addEventListener('focusin', function(e) { keyboardFocus = e.target.matches(':focus-visible'); });
-      rotator.addEventListener('focusout', function() { keyboardFocus = false; });
+      // Each slide gets its full time (data-duration) from the moment it shows; no timer while paused
+      function schedule() {
+        clearTimeout(timer);
+        if (expanded || keyboardFocus || reduceMotion.matches) return;
+        timer = setTimeout(function() {
+          rotator.setAttribute('aria-live', 'off');
+          go(current + 1);
+        }, Number(slides[current].dataset.duration) || 7000);
+      }
 
-      setInterval(function() {
-        if (expanded || hovering || keyboardFocus) return;
-        current = (current + 1) % slides.length;
+      function go(i) {
+        rotator.querySelectorAll('.read-more-btn[aria-expanded="true"]').forEach(function(btn) { setExpanded(btn, false); });
+        current = (i + slides.length) % slides.length;
         show(current);
-      }, 5000);
+        schedule();
+      }
 
-      // Read more / Read less
+      // Arrows and dots: announce the new slide and restart its timer fresh
+      function userGo(i) {
+        rotator.setAttribute('aria-live', 'polite');
+        go(i);
+      }
+
+      // Pause only while a keyboard user is inside the carousel
+      wrap.addEventListener('focusin', function(e) {
+        keyboardFocus = e.target.matches(':focus-visible');
+        if (keyboardFocus) clearTimeout(timer);
+      });
+      wrap.addEventListener('focusout', function(e) {
+        if (e.relatedTarget && wrap.contains(e.relatedTarget)) return;
+        if (keyboardFocus) { keyboardFocus = false; schedule(); }
+      });
+
+      // Read more / Read less: pause while open, fresh full timer when closed
+      function setExpanded(btn, open) {
+        btn.setAttribute('aria-expanded', String(open));
+        document.getElementById(btn.getAttribute('aria-controls')).hidden = !open;
+        btn.textContent = open ? 'Read less' : 'Read more';
+        expanded = open;
+      }
       rotator.querySelectorAll('.read-more-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
-          var panel = document.getElementById(btn.getAttribute('aria-controls'));
-          var open = btn.getAttribute('aria-expanded') !== 'true';
-          btn.setAttribute('aria-expanded', String(open));
-          panel.hidden = !open;
-          btn.textContent = open ? 'Read less' : 'Read more';
-          expanded = open;
+          setExpanded(btn, btn.getAttribute('aria-expanded') !== 'true');
+          schedule();
         });
       });
+
+      if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', schedule);
+
+      show(current);
+      schedule();
     })();
   </script>
 
